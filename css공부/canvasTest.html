@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>자이제시작이야!!</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+        var make_canvas = function() {
+            var exam = document.getElementById('exam');
+            var ctx = exam.getContext('2d');
+            /*
+            ctx.beginPath();
+            ctx.lineTo(10,10);
+            ctx.lineTo(100,10);
+            ctx.lineTo(50,150);
+            ctx.closePath();
+            ctx.stroke();
+            ctx.fillStyle = "rgb(0,0,255)";
+            ctx.fill();
+            */
+            var image = new Image();
+            image.src = "1.jpg";
+            ctx.drawImage(image, 10, 10, 400, 400);
+        }
+    </script>
+</head>
+
+<body onload="make_canvas();">
+    <canvas id="exam" width="400" height="400">
+
+    </canvas>
+</body>
+
+</html>

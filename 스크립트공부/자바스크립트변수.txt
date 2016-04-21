@@ -1,0 +1,24 @@
+﻿function Car(make, model, year, owner) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.owner = owner;
+}
+function con(){
+	var car1 = new Car("Eagle", "Talon TSi", 1993, "");
+	var car2 = new Car("Nissan", "300ZX", 1992, "");
+	car3 = new Car("ferary", "300ZX", 1888, "");
+	console.log(car1);
+	console.log(car2);
+	console.log(car3);
+}
+con();
+function car3change(){
+	car3.make = "이신우";
+}
+car3change();
+console.log(car3);
+
+con 함수 안에 var 객체는 지역변수 입니다 하지만 앞에 var를 붙이지않고 만들 car3는 전역변수로 이용됩니다. 
+결론 : 함수 내에서 전역변수를 생성할수 있다.
+전역변수를 따로 선언하지않고 하는 이유는 delete(car3)와 car3를 완전히 지울수 있습니다. 하지만 var car3를 위쪽에 선언한 경우는 delete(car3)를 사용할 수 없으므로 car3 = null or undefined 로 car3변수를 지워야하는 단점이 있습니다. 하지만 var car3 전역변수로 선언한경우는 가독성이 조금더 좋을수 있습니다.

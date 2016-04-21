@@ -1,0 +1,76 @@
+﻿Object.defineProperty 함수(JavaScript)
+
+ 
+개체에 속성을 추가하거나 기존 속성의 특성을 수정합니다.
+
+
+Object.defineProperty(object, propertyname, descriptor)
+
+object
+필수 요소.  속성을 추가 또는 수정할 개체입니다.  네이티브 JavaScript 개체(사용자 정의 개체 또는 기본 제공 개체) 또는 DOM 개체일 수 있습니다.  
+propertyname
+필수 요소.  속성 이름을 포함하는 문자열입니다.  
+descriptor
+필수 요소.  속성의 설명자입니다.  데이터 속성 또는 접근자 속성과 관련될 수 있습니다.
+
+Object.defineProperty 함수를 사용하여 다음을 수행할 수 있습니다.
+개체에 새 속성을 추가합니다.  개체에 지정된 속성 이름이 없을 때 수행됩니다.  
+기존 속성의 특성을 수정합니다.  개체에 지정된 속성 이름이 있을 때 수행됩니다.  
+
+
+arguments.callee 함수
+arguments.callee는 스스로의 함수를 호출한다.
+EX1)
+function sumTo(num) {
+	if(num <= 1) {
+		return 1;
+	} else {
+		return num + sumTo(num - 1);
+	}
+}
+EX2)
+function sumTo(num) {
+	if(num <= 1) {
+		return 1;
+	} else {
+		return num + arguments.callee(num - 1);
+	}
+}
+
+1번과 2번은 같은 코드이다 하지만 1번의 경우 함수명이 바뀌면 에러가 발생한다 하지만 2번의 경우 에러가 발생하지 않는 장점이 있다.
+
+bind() 함수
+
+EX1)
+function f(y) { return this.x + y};
+o = {x : 1};
+g = f.bind(o);
+console.log(g(3));
+//결과 4
+
+f.bind(o)는 f 함수를 실행 시켜주는 주체를 o로 지정하여 this.x = 1이 된다 따라서 g(3)은 결과가 4가 된것이다.
+
+
+call(), apply()함수
+var name = 'bill';
+
+function foo(msg,msg2) {
+
+	console.log(msg + '  ' + msg2);
+
+	console.log(this.name);
+	console.log(this.make);
+}
+
+foo('normal call','default');
+var mycar = {make: "Honda", model: "Accord", year: 1998, name : '이신우'};
+var obj = {
+	name : 'steve'
+}
+foo.call(obj,'call function','object'); //인자를 그냥 전달합니다.
+foo.apply(obj,['apply function','object']); //인자를 배열형태로 전달 합니다.
+foo.apply(mycar,['apply function','object']); //인자를 배열형태로 전달 합니다.
+
+맨앞 argments 에는 함수를 실행하는 주체를 넘겨 주고 나머지 arguments 를 call 함수는 그냥 전달하면되고 apply 는 배열형태 전달해야합니다.
+결론 : 파라미터를 배열인가 아닌가의 차이만 존재할뿐 수행하는 일은 같다
+

@@ -1,0 +1,49 @@
+﻿자바스크립트 객체 정의 코드
+function ClassName(arg1.....){
+	
+}
+위와 같이 객체를 정의하고
+var name = new CalssName(arg1...);
+으로 사용할수 있다.
+
+function ClassName(){
+	this.a = arguments[0];
+}
+형식으로 파라미터를 동적으로 받을수 있습니다.
+자바스크립트는 함수를 콜 하면 arguments 라는 객체에 파라미터들의 정보를 담아갑니다
+따라서 function 내부에서는 arguments객체를 사용하여 파라미터를 얻을 수 있습니다.
+
+function ClassName(arg1){
+	this.a = arg1
+}
+var name = new CalssName(arg1);
+이 형식의 코드는 넘겨주는 파라미터의 이름을 지정해주어 사용할 때 사용하는 형식입니다,
+ClassName 함수의 this.a = arg1 이란 함수는
+var name = new CalssName();
+name.a = arg1;
+과 같다고 볼수 있다.
+
+function ClassName(){
+	var a = arguments[0];
+}
+이런 형식의 코드는 a라는 변수를 private 형식의 멤버 변수로 사용할때 쓰이는 형식의 코드이다
+따라서 이 코드를 사용하려면 setter or getter 형식의 함수와 같이 쓰인다.
+EX)
+function ClassName(){
+	var a = arguments[0];
+	var Func = {
+		geta : function(){
+			var aClone = a;
+			return aClone;
+		},
+		seta : function(){
+			a = arguments[0];
+		},
+		
+	};
+	return Func;
+}
+이런 형태로 사용된다
+
+정리 : var 로 선언되면 private 형식 변수이고 this. 으로 선언되면 public 변수처럼 사용할수 있다.
+자바스크립트는 함수도 var 객체로 선언되기 떄문에 함수에대한 정의도 이와같이 하면 된다.
