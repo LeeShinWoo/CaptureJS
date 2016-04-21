@@ -28,8 +28,6 @@
 <script type="text/javascript" src="https://www.suhyup-bank.com/page/js/suhyup.js"></script>
 <script type="text/javascript" src="https://www.suhyup-bank.com/page/js/validate.js"></script>
 <script type="text/javascript" src="https://www.suhyup-bank.com/page/js/navigation.js"></script>
-<script type="text/javascript" src="./printmade2/Printmade3.js"></script>
-<script type="text/javascript" src="./printmade2/PDonut.js"></script>
 <form name="outLinkForm" id="outLinkForm" method="post">
 <input type="hidden" name="_OUT_LINK_URL" id="_OUT_LINK_URL" />
 </form>
@@ -1063,67 +1061,7 @@ function acrMyMenuAddCallBack(jsonData){
 </div>
 </div>
 </div>
-<button onclick="javascript:pdfToHTML();">Capture</button>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="dist/jspdf.min.js"></script>
-<script type="text/javascript" src="html2canvas.js"></script>	
-<script type="text/javascript" >
-function pdfToHTML(){
-	var pdf = new jsPDF('l', 'pt', 'a4'); var options = { pagesplit: false, background : '#000000'};pdf.addHTML($('body'), 0, 0, options, function(){ pdf.save("test.pdf");});
-/*
-	var pdf = new jsPDF('l', 'pt', 'a4');
-	var options = {
-		pagesplit: true
-	};
 
-	pdf.addHTML($('body'), 0, 0, options, function(){
-		pdf.save("test.pdf");
-	});
-	*/
-/*
-	var pdf = new jsPDF('p', 'pt', 'letter');
-	var source = $('#contents')[0];
-	console.log(source);
-	var specialElementHandlers = {
-		'#bypassme' : function(element, renderer){
-			return true;
-		}
-	}
-	margins = {
-		top : 50,
-		left : 60,
-		width : 545
-	};
-	pdf.fromHTML(
-		source
-		, margins.left
-		, margins.top
-		, {
-			'width' : margins.width
-			, 'elementHandlers' : specialElementHandlers
-		},
-		function (dispose) {
-			pdf.save('test.pdf');
-		}
-	);
-	*/
-}
-
-function capture() { 
-	html2canvas($("body")[0], {
-		onrendered: function(canvas) { 
-			var img = canvas.toDataURL("image/png");
-			console.log(img); 
-			window.open(img); // 이미지를 윈도우 팝업으로..
-			
-			var pdf = new jsPDF();
-			pdf.addImage(img, 'png', 0, 0, 180, 160);
-			pdf.save('test.pdf');
-			
-		}
-	}); 
-
-} 
 
 </script>
 <script type='text/javascript' id='JkGoVNpV5iGp' >//<![CDATA[
