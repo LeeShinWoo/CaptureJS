@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>웹 디비...</title>
+  </head>
+  <script type="text/javascript">
+  function selectWorkList(transaction, results) {
+    //initialise the listitems variable
+    var listitems = "";
+    //get the car list holder ul
+    var body = document.getElementsByTagName("body")[0];
+    var listholder = document.createElement("ul");
+    body.appendChild(listholder);
+
+    //clear cars list ul
+    listholder.innerHTML = "";
+
+    var i;
+    //Iterate through the results
+    for (i = 0; i < results.rows.length; i++) {
+        //Get the current row
+        var row = results.rows.item(i);
+
+        listholder.innerHTML += "<li>" + row.idx + " - " + row.subject + " - " + row.memo;
+    }
+}
+  var DB = function(){
+    if(window.openDatabase){
+      var db = openDatabase('todolist','1.0','해야 할 일','2 * 1024 * 1024');
+      db.transaction(function(tx){
+        var select = tx.executeSql('SELECT idx,subject,memo from worklist',[],selectWorkList);
+      });
+      /*
+      db.transaction(function(tx){
+        tx.executeSql('CREATE TABLE worklist(idx interger primary key, subject,memo)');
+          tx.executeSql('INSERT INTO worklist(idx,subject,memo) values(1,"업무","원고 다 쓰기")');
+          tx.executeSql('INSERT INTO worklist(idx,subject,memo) values(2,"약속","저녁에 쇠주")');
+          tx.executeSql('INSERT INTO worklist(idx,subject,memo) values(3,"가정","냉장고에 반찬")');
+      });
+      */
+    }else{
+      document.write("이 브라우저는 웹 SQL데이터베이스를 지원하지 않습니다");
+      return false;
+    }
+  }
+  </script>
+  <body onload="DB()">
+
+  </body>
+</html>

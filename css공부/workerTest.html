@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>worker Test</title>
+</head>
+
+<body>
+    <p>
+        <input id="worker_work" type="button" name="name" value="일해랏!">
+        <input id="worker_work_stop" type="button" name="name" value="멈춰랏!!">
+    </p>
+    <p id="worker_say">
+        일을 주십쇼..
+    </p>
+    <textarea name="name" rows="4" cols="60"> 나는 다른 작업합세..</textarea>
+    <!-- <iframe src="webSocketTest.html" width="700" height="700" sandbox></iframe> -->
+</body>
+<script type="text/javascript">
+    (function() {
+        var worker;
+        function makeWorker() {
+            worker = new Worker("calc.js");
+            if (worker) {
+                worker.onerror = function(evt) {
+                    document.getElementById("worker_say").innerHTML = "에러닷...!!!";
+                }
+            }
+        };
+        document.getElementById("worker_work").onclick = function() {
+            makeWorker();
+            worker.postMessage(0);
+            worker.onmessage = function(evt) {
+                document.getElementById("worker_say").innerHTML = evt.data;
+            };
+        };
+        document.getElementById("worker_work_stop").onclick = function() {
+            if (worker) {
+                worker.terminate();
+                alert("일을멈춰라..");
+            }
+        }
+
+    })();
+</script>
+
+</html>

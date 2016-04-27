@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var textView = document.getElementById("text-view");
+            var buttonSend = document.getElementById("send-button");
+            var buttonStop = document.getElementById("stop-button");
+            var label = document.getElementById("status-label");
+            var socket = new WebSocket("ws://127.0.0.1:1234");
+            socket.onopen = function(event) {
+                label.innerHTML = "Connection established."
+            }
+            socket.onmessage = function(event) {
+                if (typeof event.data === "string") {
+                    label.innerHTML = label.innerHTML + "<br />" + event.data;
+                }
+            }
+            socket.onclose = function(event) {
+                var code = event.code;
+                var reason = event.reason;
+                var wasClean = event.wasClean;
+
+                if (wasClean) {
+                    label.innerHTML = "Connection closed normally";
+                } else {
+                    label.innerHTML = "Connection colosed with message : " + reason + "(Conde : )" + code + ")";
+                }
+            }
+            socket.onerror = function(event) {
+                label.innerHTML = "Error : " + event;
+            }
+            buttonSend.onclick = function() {
+                if (socket.readyState == WebSocket.OPEN) {
+                    socket.send(textView.value);
+                    textView.value = "";
+                }
+            }
+            buttonStop.onclick = function() {
+                if (socket.readyState == WebSocket.OPEN) {
+                    socket.close();
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>HTML5 WebSocket chat.</h1>
+    <input type="text" id="text-view" value="" />
+    <input type="button" id="send-button" value="Send!!" />
+    <input type="button" id="stop-button" value="Stop!!" />
+    <br/>
+    <label id="status-label">Status</label>
+</body>
+
+</html>

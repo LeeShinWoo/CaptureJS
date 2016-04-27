@@ -1,0 +1,5 @@
+Web SQL Database
+크롬: %userprofile%\Local Settings\Application Data\Google\Chrome\User Data\Default\databases
+사파리: %userprofile%\Local Settings\Application Data\Apple Computer\Safari\Databases
+파폭: 지원되지 않음
+오페라: %userprofile%\Application Data\Opera\Opera\pstorage

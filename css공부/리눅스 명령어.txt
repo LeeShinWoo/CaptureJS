@@ -1,0 +1,11 @@
+우분투
+프린트메이드설치체크
+apt-cache search printmade3
+프린트메이드삭제
+sudo apt-get remove printmade3
+sudo dpkg --purge printmade3
+설정파일까지 모두지움
+sudo apt-get --purge remove printmade3
+
+리눅스 버전확인(페도라도 확인가능!!)
+cat /etc/issue

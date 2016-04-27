@@ -1,1 +1,5 @@
-﻿%userprofile%\Local Settings\Application Data\Microsoft\Internet Explorer\DOMStore
+크롬: %userprofile%\Local Settings\Application Data\Google\Chrome\User Data\Default\Local Storage
+사파리: %userprofile%\Local Settings\Application Data\Apple Computer\Safari\LocalStorage
+파폭: %userprofile%\mkex\Application Data\Mozilla\Firefox\Profiles\xxx.default\webappsstore.sqlite 파일
+오페라: %userprofile%\Application Data\Opera\Opera\pstorage
+IE8: %userprofile%\Local Settings\Application Data\Microsoft\Internet Explorer\DOMStore

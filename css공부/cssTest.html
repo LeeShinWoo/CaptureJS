@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <style media="screen">
+      input:enabled+span{
+        font-weight: bold;
+        color: red;
+      }
+      input:disabled+span{
+        color: #999;
+      }
+      :not(span){
+        color: blue;
+      }
+      body{
+        font-family: Dotum;
+
+      }
+      h2{
+        font-size: 4em;
+      }
+      /*div{
+        width: 200px;
+        font-size: 4em;
+        background-color: red;
+        -webkit-box-shadow:-20px -20px 30px red,
+        20px -20px 30px green,
+        -20px 20px 30px yellow,
+        20px 20px 30px blue;
+      }*/
+      .box_red{background-color: red;}
+      .box_orange{background-color: orange}
+      .box_yellow{background-color: yellow}
+      .box_green{background-color: green}
+      @-webkit-keyframes movebox{
+        from{
+          -webkit-transform:rotate(0deg);
+        }
+        to{
+            -webkit-transform:rotate(1080deg);
+            background-color: black;
+        }
+      }
+      #mother{
+        display: -webkit-box;
+        -webkit-animation-name : movebox;
+        -webkit-animation-duration : 4s;
+        -webkit-abunatuib-uteratuib-count:infinite;
+        -webkit-animation-timing-function : ease-in-out;
+        -webkit-animation-direction : alternate;
+      }
+      p{
+        margin: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <label><input type="checkbox" /><span>체크박스가 활성상태입니다.</span></label><br/>
+    <label><input type="checkbox"  disabled/><span>체크박스가 비활성상태입니다.</span></label><br/>
+    <div class="">
+      중략...
+    </div>
+    <p></P>
+    <div id="sample">
+      페이지의 끝부분입니다
+    </div>
+    <h2>제목입니다.</h2>
+    <div id="mother">
+      <div class="box_red">
+        빨갱이
+      </div>
+      <div class="box_orange">
+        오렌쥐
+      </div>
+      <div class="box_yellow">
+        노랭이
+      </div>
+      <div class="box_green">
+        초록이
+      </div>
+    </div>
+  </body>
+</html>

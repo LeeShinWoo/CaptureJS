@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>초미니 오에카키</title>
+    <style media="screen">
+      body{
+        margin: 20px;
+      }
+      canvas{
+        cursor:crosshair;
+        border: solid 2px #000;
+        margin: 15px 0 0 0;
+        -webkit-box-shadow:1px 1px 20px #ccc;
+        -moz-box-shadow:1px 1px 20px #ccc;
+        box-shadow:1px 1px 20px #ccc;
+      }
+    </style>
+    <script type="text/javascript">
+      var canvas;
+      var ctx;
+      var flag = false;
+      var polygon ="bot";
+      var startX;
+      var startY;
+      var ready = function(){
+        canvas = document.getElementById("canvas");
+        ctx = canvas.getContext("2d");
+        canvas.onmousedown = drawStart;
+        canvas.onmousemove = drawing;
+        window.onmouseup = drawEnd;
+      }
+
+      var w1 = function(){
+        ctx.lineWidth = 0.1;
+        polygon ="bot";
+      }
+
+      var w5 = function(){
+        ctx.lineWidth = 5;
+        polygon ="bot";
+      }
+
+      var w15 = function(){
+        ctx.lineWidth = 15;
+        polygon ="bot";
+      }
+
+      var black = function(){
+        ctx.strokeStyle = '#000000';
+      }
+
+      var red = function(){
+        ctx.strokeStyle = '#ff0000';
+      }
+
+      var green = function(){
+        ctx.strokeStyle = '#00ff00';
+      }
+
+      var blue = function(){
+        ctx.strokeStyle = '#0000ff';
+      }
+
+      var yellow = function(){
+        ctx.strokeStyle = '#ffff00';
+      }
+
+      var rect = function(){
+        polygon = "rect";
+      }
+      var drawStart = function(event){
+        var xpos = event.clientX - event.target.offsetLeft;
+        var ypos = event.clientY - event.target.offsetTop;
+        switch (polygon) {
+          case "bot":
+            ctx.beginPath();
+            ctx.moveTo(xpos, ypos);
+            break;
+          case "rect":
+            startX = xpos;
+            startY = ypos;
+            break;
+          default:
+
+        }
+        flag = true;
+      }
+
+      var drawing = function(event){
+        if(flag){
+          var xpos = event.clientX - event.target.offsetLeft;
+          var ypos = event.clientY - event.target.offsetTop;
+          switch (polygon) {
+            case "bot":
+              ctx.lineCap = 'round';
+              ctx.lineTo(xpos, ypos);
+              ctx.stroke();
+              break;
+            case "rect":
+              ctx.clearRect(startX,startY,xpos-startX,ypos-startY);
+              ctx.strokeRect(startX,startY,xpos-startX,ypos-startY);
+              break;
+            default:
+
+          }
+
+
+        }
+      }
+
+      var drawEnd = function(event){
+        var xpos = event.clientX - event.target.offsetLeft;
+        var ypos = event.clientY - event.target.offsetTop;
+        switch (polygon) {
+          case "bot":
+
+            break;
+          case "rect":
+
+            break;
+          default:
+
+        }
+        flag = false;
+      }
+
+      var savePNG = function(){
+        window.open(canvas.toDataURL());
+      }
+
+      var erase = function(){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+      }
+    </script>
+  </head>
+  <body onload="ready()">
+    <div class="">
+      <input type="button" value="PNG 파일로 저장" onclick="savePNG()" />
+      <input type="button" value="새로그리기" onclick="erase()" />
+      |
+      <input type="button" value="펜 굵게" onclick="w15()" />
+      <input type="button" value="펜 보통" onclick="w5()" />
+      <input type="button" value="펜 얇게" onclick="w1()" />
+      |
+      <input type="button" value="검정" onclick="black()" />
+      <input type="button" value="빨강" onclick="red()" />
+      <input type="button" value="파랑" onclick="blue()" />
+      <input type="button" value="초록" onclick="green()" />
+      <input type="button" value="노랑" onclick="yellow()" />
+      |
+      <input type="button" value="사각형" onclick="rect()" />
+    </div>
+    <canvas id="canvas" width="800" height="500"></canvas>
+  </body>
+</html>

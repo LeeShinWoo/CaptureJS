@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>구글맵..</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            if (navigator.geolocation) {
+                function showYourPosition(position) {
+                    alert("당신의 위치를 알려드리겠습니다");
+                    alert("위도 : " + position.coords.latitude);
+                    alert("경도 : " + position.coords.longitude);
+                };
+                navigator.geolocation.getCurrentPosition(showYourPosition);
+            } else {
+                document.write("죄송합니다. 사용하고 계신 브라우저는 geolocation을 지원하지 않습니다.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
