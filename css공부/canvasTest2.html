@@ -8,6 +8,7 @@
         margin: 20px;
       }
       canvas{
+        float: left;
         cursor:crosshair;
         border: solid 2px #000;
         margin: 15px 0 0 0;
@@ -17,12 +18,67 @@
       }
     </style>
     <script type="text/javascript">
+    //websocket script
+    var problem = ['토끼','사슴'];
+    var socket
+    window.onload = function() {
+        var buttonSend = document.getElementById("send-button");
+        var label = document.getElementById("status-label");
+        var img = document.getElementById("tempimage");
+        var textView = document.getElementById("text-view");
+        socket = new WebSocket("ws://192.168.1.42:1234");
+        socket.onopen = function(event) {
+            label.innerHTML = "Connection established.";
+        }
+        socket.onmessage = function(event) {
+            if (typeof event.data === "string") {
+              var data = event.data.split(':');
+              var order = data[0];
+                if(order == "text"){
+                  label.innerHTML = label.innerHTML + "<br />" + event.data;
+                }else if(order == "modify"){
+                  if(data[1] == "examiner")  canvas.style.display = 'block';
+                  else if(data[1] == "answer")  canvas.style.display = 'none';
+                }else if(order == "question"){
+                  if(problem[0] == data[1]) socket.send('reply|right');
+                  else socket.send('reply|fail');
+                }else if(order == "reply"){
+                  if(data[1] == "right") alert("정답!!");
+                  else alert("오답!!");
+                }else{
+                  img.src = event.data;
+                }
+
+            }
+        }
+        socket.onclose = function(event) {
+            var code = event.code;
+            var reason = event.reason;
+            var wasClean = event.wasClean;
+
+            if (wasClean) {
+                label.innerHTML = "Connection closed normally";
+            } else {
+                label.innerHTML = "Connection colosed with message : " + reason + "(Conde : )" + code + ")";
+            }
+        }
+        socket.onerror = function(event) {
+            label.innerHTML = "Error : " + event;
+        }
+        buttonSend.onclick = function() {
+            if (socket.readyState == WebSocket.OPEN) {
+                socket.send("question|"+textView.value);
+                textView.value = "";
+            }
+        }
+    }
+    //canvas Script
       var canvas;
       var ctx;
       var flag = false;
       var polygon ="bot";
-      var startX;
-      var startY;
+      var startX,startY;
+      var clearX,clearY;
       var ready = function(){
         canvas = document.getElementById("canvas");
         ctx = canvas.getContext("2d");
@@ -98,13 +154,17 @@
               ctx.stroke();
               break;
             case "rect":
-              ctx.clearRect(startX,startY,xpos-startX,ypos-startY);
+              ctx.clearRect(startX,startY,clearX,clearY);
               ctx.strokeRect(startX,startY,xpos-startX,ypos-startY);
+              clearX = xpos-startX;
+              clearY = ypos-startY;
               break;
             default:
 
           }
-
+          if (socket.readyState == WebSocket.OPEN) {
+              socket.send("img|"+canvas.toDataURL());
+          }
 
         }
       }
@@ -135,6 +195,10 @@
     </script>
   </head>
   <body onload="ready()">
+    <input type="text" id="text-view" value="" />
+    <input type="button" id="send-button" value="Send!!" />
+    <br/>
+    <label id="status-label">Status</label>
     <div class="">
       <input type="button" value="PNG 파일로 저장" onclick="savePNG()" />
       <input type="button" value="새로그리기" onclick="erase()" />
@@ -151,6 +215,7 @@
       |
       <input type="button" value="사각형" onclick="rect()" />
     </div>
-    <canvas id="canvas" width="800" height="500"></canvas>
+    <canvas id="canvas" width="600" height="500"></canvas>
+    <img id="tempimage"src="" alt="그리는중.." />
   </body>
 </html>
