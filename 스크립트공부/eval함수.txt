@@ -1,0 +1,4 @@
+eval 함수를 사용하면 JavaScript 소스 코드를 동적으로 실행할 수 있습니다.
+codeString 문자열은 JavaScript 파서에 의해 구문 분석되고 실행됩니다.
+eval 함수에 전달된 코드는 eval 함수가 호출되는 것과 같은 상황에서 실행됩니다.
+가능한 모든 경우에 JSON.parse 함수를 사용하여 JSON(JavaScript Object Notation) 텍스트를 deserialize하세요. JSON.parse 함수는 eval 함수보다 안전하고 실행 속도도 빠릅니다.
