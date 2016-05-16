@@ -14,5 +14,9 @@
 	"newUser": {
 		"password": "pass",
 		"name": "dltlsdn"
+	},
+	"rlaalrud": {
+		"password": "1234",
+		"name": "rlaalrud"
 	}
 }

@@ -90,8 +90,7 @@ module.exports = function(app, fs)
 
         var result = {};
         var username = req.params.username;
-        console.log(req.headers);
-        console.log(req.params);
+        console.log(req.body);
         // CHECK REQ VALIDITY
         if(!req.body["password"] || !req.body["name"]){
             result["success"] = 0;
