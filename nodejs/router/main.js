@@ -14,6 +14,15 @@ module.exports = function(app, fs)
       res.render('about.html');
     });
 
+    app.get('/index3',function(req,res){
+      sess = req.session;
+      res.render('index3', {
+             title: "MY HOMEPAGE",
+             length: 5,
+             name: sess.name,
+             username: sess.username
+         })
+    });
     app.get('/list', function (req, res) {
       fs.readFile( __dirname + "/../data/" + "user.json", 'utf8', function (err, data) {
           console.log( data );
