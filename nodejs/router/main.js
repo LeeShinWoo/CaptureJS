@@ -1,4 +1,4 @@
-module.exports = function(app, fs)
+module.exports = function(app, fs, connection)
 {
     app.get('/',function(req,res){
       sess = req.session;
@@ -8,7 +8,6 @@ module.exports = function(app, fs)
              name: sess.name,
              username: sess.username
          })
-
     });
     app.get('/about',function(req,res){
       res.render('about.html');
@@ -16,11 +15,40 @@ module.exports = function(app, fs)
 
     app.get('/index3',function(req,res){
       sess = req.session;
-      res.render('index3', {
+      fs.readFile( __dirname + "/../data/" + "user.json", 'utf8', function (err, data) {
+        var users = JSON.parse(data);
+        res.render('index3', {
              title: "MY HOMEPAGE",
-             length: 5,
              name: sess.name,
-             username: sess.username
+             username: sess.username,
+             active : 'home',
+             list : users
+         });
+      });
+
+    });
+
+    //mysql test page
+    app.get('/index4',function(req,res){
+      var query = connection.query('select * from testtable where serial < 100',function(err,rows){
+          for(var i=0;i<rows.length;i++){
+            console.log(rows[i]);
+          }
+      });
+    });
+
+
+    app.get('/login2',function(req,res){
+      //get방식 데이터 받는방법
+      // console.log(req.query);
+      // console.log(req.query.error);
+      // console.log(req.query.error2);
+      sess = req.session;
+      res.render('login', {
+             title: "MY HOMEPAGE",
+             name: sess.name,
+             username: sess.username,
+             active : 'login'
          })
     });
     app.get('/list', function (req, res) {
@@ -45,20 +73,23 @@ module.exports = function(app, fs)
      });
   });
 
-  app.get('/login/:username/:password', function(req, res){
+  // app.get('/login/:username/:password', function(req, res){
+  app.post('/login', function(req, res){
         var sess;
         sess = req.session;
 
         fs.readFile(__dirname + "/../data/user.json", "utf8", function(err, data){
             var users = JSON.parse(data);
-            var username = req.params.username;
-            var password = req.params.password;
+            //post방식 데이터 받는방법
+            var username = req.body.username;
+            var password = req.body.password;
             var result = {};
             if(!users[username]){
                 // USERNAME NOT FOUND
                 result["success"] = 0;
                 result["error"] = "not found";
-                res.json(result);
+                // res.json(result);
+                res.redirect('./index3');
                 return;
             }
 
@@ -68,12 +99,13 @@ module.exports = function(app, fs)
                 sess.name = users[username]["name"];
                 console.log(sess.username);
                 console.log(sess.name);
-                res.json(result);
-
+                // res.json(result);
+                res.redirect('./index3');
             }else{
                 result["success"] = 0;
                 result["error"] = "incorrect";
-                res.json(result);
+                // res.json(result);
+                res.redirect('./index3');
             }
         })
     });

@@ -1,5 +1,4 @@
-<nav class="navbar navbar-default">
-        <div class="container">
+<div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
@@ -7,12 +6,21 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand" href="#">My first project</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
+              <% if(active=="home") { %>
+              <li class="active"><a href="/index3">Home</a></li>
+              <% }else{ %>
+              <li><a href="/index3">Home</a></li>
+              <% } %>
+              <% if(active=="login"){ %>
+              <li class="active"><a href="/login2">login</a></li>
+              <% }else{ %>
+              <li><a href="/login2">login</a></li>
+              <% } %>
+
               <li><a href="#contact">Contact</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -26,7 +34,11 @@
                   <li><a href="#">One more separated link</a></li>
                 </ul>
               </li>
+              <% if(username){ %>
+                  <li><a><font color="gray">Welcome! <%= username %> (name: <%= name %>)</font></a></li>
+              <% }else{ %>
+                  <li><a><font color="gray"> Please Login.</font></a></li>
+              <% } %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
-      </nav>
