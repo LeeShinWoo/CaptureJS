@@ -26,4 +26,17 @@ angular.module('starter.controllers', [])
     enableFriends : true,
     dltlsdn : true
   };
+})
+
+.controller('testCtrl', function($scope ,test) {
+  $scope.test = test.test();
+})
+
+.controller('tableCtrl', function($scope ,table) {
+  $scope.dataes = table.getData();
+  $scope.add = function(num){
+    alert(num);
+  };
+  $scope.remove = table.remove;
+  $scope.addData = table.addData;
 });
