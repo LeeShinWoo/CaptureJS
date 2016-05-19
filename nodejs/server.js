@@ -13,6 +13,7 @@ app.use(express.static(__dirname + '/views'));
 
 
 //mysql 관련 소스
+/*
 var connection = mysql.createConnection({
     host    :'localhost',
     port : 3306,
@@ -35,7 +36,7 @@ var query = connection.query('select * from users',function(err,rows){
 
     // console.log(rows);
 });
-
+*/
 // var query2 = connection.query('select * from users where userid='+mysql.escape('123'),function(err,rows){
 //     console.log(rows);
 // });
@@ -53,8 +54,8 @@ app.use(session({
  resave: false,
  saveUninitialized: true
 }));
-var router = require('./router/main')(app, fs, connection);
-
+// var router = require('./router/main')(app, fs, connection);
+var router = require('./router/main2')(app, fs);
 var server = app.listen(3000, function(){
   console.log('Express server has started on port 3000');
 });

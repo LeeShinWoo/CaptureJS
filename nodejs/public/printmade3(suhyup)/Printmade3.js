@@ -467,29 +467,22 @@ var browser = PTMChecker.checkWebBrowser();
 		*/
 		timeingRun : function(){
 			PTMInstallChecker.check();
-			//alert(Donut.browser);
 			if(Donut.OS == "Win"){
-
 				if(PTMInstallChecker.isPTM){
 					PTMBridge.doWindow();
 					return 0;
 				}else{
-					//alert("uninstalled");
 					PTMLoadingClose();
 					return 0;
 				}
 			}else {
-
-						//alert("TTTEST21");
 				if(PTMInstallChecker.isPTM){
-						//alertalert("Installed");
 					if(PTMBridge.doFS() == false){
 						//alert("doBridge!");
 						PTMBridge.doBridgeA();
 						return 0;
 					}
 				}else{
-					//alert("uninstalled");
 					PTMLoadingClose();
 					return 0;
 				}
@@ -5077,7 +5070,7 @@ var id = GPrintmade.option.GetElementId();
 
 						}
 
-						param = "I!FRAMEID:"+frameid+"|ELEMENTID:"+elementid+"|ALIGNMENT:left|CUTRECT:0,0,0,0|FORMURL:"+resultformurl+"|PAGEWIDTH:"+pagewidth;
+						param = "I!FRAMEID:"+frameid+"|ELEMENTID:"+elementid+"|ALIGNMENT:left|CUTRECT:0,0,0,0|FORMURL:"+resultformurl+"|PAGEWIDTH:"+pagewidth+"|PREVIEWMODE:1";
 						//alert(param);
 
 						var lhostArray = location.hostname.split(".");
