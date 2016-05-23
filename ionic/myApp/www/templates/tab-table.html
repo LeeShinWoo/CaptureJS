@@ -15,6 +15,14 @@
           <div class="col"><button class="button" ng-click="remove(data)">remove</button></div>
           <button class="button" ng-click="addData(data)">add</button>
         </div>
+        <hr>
+        <div class="row">
+          <div class="col"><input type="text" ng-model="name" placeholder="name"></div>
+          <div class="col"><input type="text" ng-model="code" placeholder="code"></div>
+          <div class="col"><input type="text" ng-model="limit" placeholder="limit"></div>
+          <div class="col"><input type="text" ng-model="account" placeholder="account"></div>
+          <div class="col"><button class="button" ng-click="addData2(name,code,limit,account);name='';code='';limit='';account='';">add</button></div>
+        </div>
 
   </ion-content>
 </ion-view>

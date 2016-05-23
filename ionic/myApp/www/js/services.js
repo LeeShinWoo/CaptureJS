@@ -91,6 +91,16 @@ angular.module('starter.services', [])
       angular.copy(p_data, tempdata); //angularjs 객체 복사 사용법
       console.log(tempdata);
       data.push(tempdata);
+    },
+    addData2 : function(name,code,limit,account){
+      var tempdata = {
+        name : name,
+        code : code,
+        limit : limit,
+        account : account
+      };
+      console.log(tempdata);
+      data.push(tempdata);
     }
   }
 });
