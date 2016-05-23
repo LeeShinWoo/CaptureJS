@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
   $scope.addData = table.addData;
   $scope.addData2 = table.addData2;
   // $scope.addData2 = function(name,code,limit,account){
-  //   console.log(name);
+  //   console.log($scope.name);
   //   console.log(code);
   //   console.log(limit);
   //   console.log(account);
