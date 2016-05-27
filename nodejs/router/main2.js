@@ -35,7 +35,7 @@ module.exports = function(app, fs)
            title: "MY HOMEPAGE",
            name: sess.name,
            username: sess.username,
-           active : 'home',
+           active : 'contact',
        });
     });
 
