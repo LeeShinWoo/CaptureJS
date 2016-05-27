@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<HTML lang=ko xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml" sizset="1" sizcache02000851658694594="1.8.8" sizcache04287349880459257="10"><HEAD sizset="2" sizcache04287349880459257="10"><TITLE>추진경과</TITLE>
+<META http-equiv=Content-Type content=text/html;charset=euc-kr><!-- 페이지템플릿 리소스 --><!-- 공통 작업 -->
+<SCRIPT src="https://www.suhyup-bank.com/common/js/ib20.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="https://www.suhyup-bank.com/common/js/ib20_menu.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="https://www.suhyup-bank.com/common/js/ib20_notice.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="https://www.suhyup-bank.com/common/js/ib20_outLink.js" type=text/javascript></SCRIPT>
+<!-- 디자인팀 --><!-- 업무페이지 --><LINK href="/css/sub_layout.css" rel=stylesheet type=text/css href_ptm="https://www.suhyup-bank.com/css/sub_layout.css">
+<SCRIPT src="https://www.suhyup-bank.com/js/jquery.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="https://www.suhyup-bank.com/js/jquery.easing.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="https://www.suhyup-bank.com/js/jquery.ui.datepicker.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="https://www.suhyup-bank.com/js/sh_ui.js" type=text/javascript></SCRIPT>
+<!-- 개발팀 작업 -->
+<SCRIPT src="https://www.suhyup-bank.com/page/js/common.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="https://www.suhyup-bank.com/page/js/suhyup.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="https://www.suhyup-bank.com/page/js/validate.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="https://www.suhyup-bank.com/page/js/navigation.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="https://www.suhyup-bank.com/printMade/server_files/Printmade2.js" type=text/javascript></SCRIPT>
+
+<FORM name=outLinkForm id=outLinkForm method=post sizset="19" autocomplete="off" sizcache04287349880459257="10"><INPUT name=_OUT_LINK_URL id=_OUT_LINK_URL type=hidden></FORM><!-- 메뉴진입체크 -->
+<SCRIPT type=text/javascript>
+
+	if('' == ''){
+		menuEntryHandler('PBM00537');
+	}else{
+		if('PBM00537' == 'PBM00266'){
+			if(('' == '1') || ('' == '2') || ('' == '17')){
+				menuEntryHandler2('PBM00537', '');
+			}else{
+				menuEntryHandler2('PBM00537', -1);
+			}
+		}else if('PBM00537' == 'PBM00265'){
+			if(('' == '3') || ('' == '4') || ('' == '5') || ('' == '6') || ('' == '7') || ('' == '8') || ('' == '18')){
+				menuEntryHandler2('PBM00537', '');
+			}else{
+				menuEntryHandler2('PBM00537', -1);
+			}
+		}else if('PBM00537' == 'PBM00269'){
+			if(('' == '9') || ('' == '10')){
+				menuEntryHandler2('PBM00537', '');
+			}else{
+				menuEntryHandler2('PBM00537', -1);
+			}
+		}else if('PBM00537' == 'PBM00268'){
+			if(('' == '11') || ('' == '12')){
+				menuEntryHandler2('PBM00537', '');
+			}else{
+				menuEntryHandler2('PBM00537', -1);
+			}
+		}else if(
+			('PBM00537' == 'PBM00264' && '' == '19') ||
+			('PBM00537' == 'PBM00274' && '' == '20')
+		){
+			menuEntryHandler2('PBM00537', '');
+
+		}else{
+			menuEntryHandler2('PBM00537', -1);
+		}
+	}
+</SCRIPT>
+<!-- 프레임 타이틀 index.jsp -->
+<SCRIPT type=text/javascript>
+	top.document.title = '추진경과' + ' - 수협은행 개인뱅킹' + ' ['+'PB04'+']';
+</SCRIPT>
+<!-- 임시 추후 삭제 요망 -->
+<SCRIPT type=text/javascript>
+	var _login_reg_yn = true;
+	var _menu_reg_yn = true;
+	if('N' == 'null' || 'N' == ''){
+		_login_reg_yn = false;
+	}
+	if('31' == 'null' || '31' == ''){
+		_menu_reg_yn = false;
+	}
+
+	if(!_login_reg_yn || !_menu_reg_yn){
+		if(!_login_reg_yn && !_menu_reg_yn){
+			alert('로그인 여부 및 메뉴권한을 등록해 주시기 바랍니다.');
+		} else if(!_login_reg_yn){
+			alert('로그인 여부를 등록해 주시기 바랍니다.');
+		} else if(!_menu_reg_yn){
+			alert('메뉴권한을 등록해 주시기 바랍니다.');
+		}
+	}
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+//<![CDATA[
+	/*$(document).ready(function(){
+		// calendar
+		$('.calendar').datepicker({
+			onSelect: function(dateText, inst) {
+				alert(dateText);
+				$(this).closest('.calendar').hide();
+				$('.btnCalendar[href="#'+$(this).attr('id')+'"]').focus();
+			}
+		});
+	});*/
+//]]>
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+
+	{
+		//var isLogined = <!--fsbUserVO==null?"false":"true"-->;//다른 곳의 isLogined 와 충돌 방지 {} 감쌈
+
+		/**
+		 * Layout 위젯들 초기화
+		 */
+		$(window).load(function() {
+
+			try {
+				jQuery(window).bind("unload", function() {});//Trick
+			} catch (ignore) {
+			}
+
+			try {
+				//initTop();
+			} catch (ignore) {
+			}
+
+			try {
+				//initLeft();
+			} catch (ignore) {
+			}
+
+			try {
+				//initBottom();
+			} catch (ignore) {
+			}
+
+			try {
+				//initMainNotice();
+			} catch (ignore) {
+			}
+
+			try {
+				//모든 form 에 autocomplete off 속성 추가
+				var elements = document.getElementsByTagName("form");
+				for (var i = 0; i < elements.length; i++) {
+					elements[i].setAttribute("autocomplete", "off");//Works in IE, Firefox <form autocomplete="off">
+					//alert(elements[i].name + '.autocomplete=' elements[i].getAttribute("autocomplete"));
+				}
+
+				//모든 input type="password" 페이지 로드시 자동입력 문자 삭제 (브라우저 캐쉬)
+				var elements = document.getElementsByTagName("input");
+				for (var i = 0; i < elements.length; i++) {
+					if (elements[i].type=="password") {
+						elements[i].value = '';
+						//alert(elements[i].name);
+					}
+				}
+
+				initMain();
+
+			} catch (ignore) {
+			}
+
+
+			//if (!opener && isLogined) {
+				//initLogoutTimer();
+			//}
+		});
+	}
+
+</SCRIPT>
+
+<SCRIPT src="https://www.suhyup-bank.com/common/include/noback.jsp" type=text/javascript></SCRIPT>
+
+<STYLE type=text/css>#screen_shade_mask {
+	HEIGHT: 100%; WIDTH: 100%; POSITION: absolute; LEFT: 0px; FILTER: alpha(opacity=20); Z-INDEX: 9000; DISPLAY: none; TOP: 0px; BACKGROUND-COLOR: #ccc; opacity: 0.2; _background-color: #fff; -moz-opacity: 0.2
+}
+#ajax_load_indicator {
+	HEIGHT: 160px; WIDTH: 126px; POSITION: absolute; MARGIN-LEFT: -63px; LEFT: 50%; Z-INDEX: 9100; MARGIN-TOP: -80px; DISPLAY: none; TOP: 50%
+}
+</STYLE>
+</HEAD>
+<BODY sizset="0" sizcache02000851658694594="1.8.8" sizcache04287349880459257="11">
+<DIV id=screen_shade_mask></DIV>
+<DIV id=ajax_load_indicator sizset="30" sizcache04287349880459257="10"><IMG alt=처리중입니다. src="https://www.suhyup-bank.com/images/loading/loading.gif" src_ptm="https://www.suhyup-bank.com/images/loading/loading.gif"></DIV>
+<SCRIPT type=text/javascript>
+
+	// biz...
+
+</SCRIPT>
+<!-- End of JSP View -->
+<DIV id=wrapper sizset="0" sizcache02000851658694594="1.8.8" sizcache04287349880459257="11">
+<DIV id=header sizset="0" sizcache04287349880459257="11">
+<DIV id=WID00054 sizset="0" sizcache04287349880459257="11">
+<SCRIPT type=text/javascript>
+
+	/**
+	 * 로그아웃 처리
+	 */
+	function logout(url){
+		// 인증서 캐쉬 초기화
+		//InitCache();
+
+		if('false' == 'true'){
+			/**
+			 * [1/2] Common Form Pre-Submit.
+			 */
+			//var form = document.getElementById("subForm");
+			var form = $("#subForm").get(0);
+			preSubmit(form);/* [!] Before verification, nearby top */
+
+			form.MENU_ID.value = url;
+
+			/**
+			 * [2/2] Common Form Submit.
+			 *
+			 * - Do preSubmit before validation.
+			 */
+			form.action="/ib20/act/FIL00236";	// lgn0104A - 로그아웃 페이지
+			form.target = "_self";
+			postSubmit(form);/* [!] Before normal submit or ajax submit */
+			doSubmit(form);/* [!] Do all normal submit by this method */
+
+			// 개인에서 기업으로 이동하는 경우
+			if("CBM00000" == url){
+				goSiteMain('https://biz.suhyup-bank.com:443');
+			}
+		} else {
+			// 비로그인시 기업 메인 페이지로 이동한다.
+			document.location.href='/ib20/mnu/PBM00000';
+		}
+
+	}
+
+	// 기업페이지이동
+	function siteMove(){
+
+		// 로그인 상태에서만 팝업을 띄운다.
+		if('false' == 'true'){
+			var objpop  = document.subForm;
+			objpop._BANK_TARGET_GBN.value = "pb";
+			objpop._BANK_DESTINATION_GBN.value = "cb";
+			objpop.action= "/ib20/mnu/PBM00456";
+
+			window.open("", "PBM00456", "menubar=0,resizable=0,scrollbars=0,width=400, height=270, left=0, top=0");
+			objpop.target = "PBM00456";
+			objpop.method = "post";
+			objpop.submit();
+		} else {
+			// 비로그인시 기업 메인 페이지로 이동한다.
+			//document.location.href='/ib20/mnu/CBM00000';
+			top.location.href='https://biz.suhyup-bank.com:443';
+		}
+	}
+
+	// 메인페이지 이동
+	function moveMain(){
+
+		// 로그인 상태에서만 팝업을 띄운다.
+		if('false' == 'true'){
+			var objpop  = document.subForm;
+			objpop._BANK_TARGET_GBN.value = "pb";
+			objpop._BANK_DESTINATION_GBN.value = "pb";
+			objpop.action= "/ib20/mnu/PBM00456";
+
+			window.open("", "PBM00456", "menubar=0,resizable=0,scrollbars=0,width=400, height=270, left=0, top=0");
+			objpop.target = "PBM00456";
+			objpop.method = "post";
+			objpop.submit();
+		} else {
+			// 비로그인시 메인 페이지로 이동한다.
+			goSiteMain('/');
+		}
+	}
+
+	/**
+	* 독도사이버 이동 (개인)
+	* 로그인상태 -> 출금계좌페이지로 이동
+	* 로그아웃상태 -> 메인페이지 이동
+	*/
+	function goCyberDokdo(){
+
+		// 로그인상태 -> 출금계좌페이지
+		//document.location.href='/ib20/mnu/DBM00013';
+		// MenuFilter 에서 DBM00001 진입시 로그인된 경우 DBM00013 이동
+
+		// 온라인 고객은 독도사이버를 막는다.
+		if('' == '4'){
+			pbAllMenu ("온라인고객은 독도사이버를 이용하실 수 없습니다.");
+		} else {
+			var form  = document.subForm;
+			form.action="/dokdo/";	// lgn0104A - 로그아웃 페이지
+			form.target = "_parent";
+			doSubmit(form);/* [!] Do all normal submit by this method */
+
+			//top.location.href='/dokdo/';
+		}
+
+	}
+
+	/**
+	* 로그아웃 후 사이트 이동
+	*/
+	function changeSite(url){
+		//url : CBM00000
+		logout(url);
+	}
+
+	//function test(){
+	//	siteMoveUrl('PB', 'false', 'https://biz.suhyup-bank.com:443', "CBM00001");
+	//}
+
+	/* 전체메뉴 설정*/
+	function allMenuOpen(){
+		$(".allMenuBg, .allMenu").slideDown();
+		$("#leftArea").css("z-index",2);
+	}
+	function allMenuClose(){
+		$(".allMenuBg, .allMenu").slideUp(function(){
+			$("#leftArea").css("z-index",3);
+		});
+	}
+</SCRIPT>
+<!-- Start of JSP View --><!-- <div class="wrapper"> -->
+<FORM name=subForm id=subForm method=post sizset="37" autocomplete="off" sizcache04287349880459257="10"><INPUT name=ib20_cur_mnu type=hidden value=PBM00537> <INPUT name=MENU_ID id=MENU_ID type=hidden> <INPUT name=_BANK_TARGET_GBN id=_BANK_TARGET_GBN type=hidden value=pb> <INPUT name=_BANK_DESTINATION_GBN id=_BANK_DESTINATION_GBN type=hidden value=cb> <INPUT name=PROCESS_HANDLE_PASS id=PROCESS_HANDLE_PASS type=hidden> <INPUT name=POPUP_TITLE id=POPUP_TITLE type=hidden> <INPUT name=_MOVE_LINK_URL id=_MOVE_LINK_URL type=hidden> <INPUT name=_CHECK_SESSION id=_CHECK_SESSION type=hidden> <INPUT name=_DOMAIN id=_DOMAIN type=hidden> </FORM>
+<FORM name=pageSearchForm id=pageSearchForm method=get sizset="47" autocomplete="off" sizcache04287349880459257="10"><INPUT name=kwd type=hidden> <INPUT name=sType type=hidden value=00> <INPUT name=reSearch type=hidden> </FORM><!-- Start of JSP View --><!-- skip navigation -->
+<UL class=skipNavi sizset="51" sizcache04287349880459257="10">
+<LI id=skip_navigation sizset="52" sizcache04287349880459257="10"><A href="#contents">본문으로 바로가기</A></LI>
+<LI sizset="54" sizcache04287349880459257="10"><A href="#gnb">대메뉴 바로가기</A></LI></UL>
+<DIV class="popupNotice tooltipLyPop" id=noticeContentDiv><!--
+		<div class="popNWrap">
+			<span class="popNTitle">전자금융 사기주의 안내</span>
+			<span class="fRight">
+				<a href="/cmm/main_popup.html" target="_blank" title="새창으로 열기" onclick="window.open(this.href, '전자금융사기주의안내', 'width=570, height=370, scrollbars=no'); return false;" class="viewMore"><img src="https://www.suhyup-bank.com/images/common/btn_pop_view.gif" alt="전자금융 사기주의 안내 상세보기" /></a>
+				<span class="btnPNClose"><input type="checkbox" id="noMoreV1" class="inputCheck" /><label for="noMoreV1">오늘하루그만보기</label><a href="#nohref" onclick="$('.popupNotice').hide();"><img src="https://www.suhyup-bank.com/images/common/btn_pop_close.gif" alt="팝업 알림 닫기" /></a></span>
+			</span>
+		</div>
+		 --></DIV>
+<DIV class=allMenuBg></DIV><!-- 01.23 추가 -->
+<DIV class=header_new_wrap style= sizset="0" ptm-background-image sizcache04287349880459257="11">
+<DIV class=header_new sizset="0" sizcache04287349880459257="11"><!-- //01.23 추가 -->
+<DIV class=mainLogoArea sizset="60" sizcache04287349880459257="10">
+<H1 sizset="61" sizcache04287349880459257="10"><A href="javascript:moveMain()" sizset="62" sizcache04287349880459257="10"><IMG alt="SH수협은행 기업" src="https://www.suhyup-bank.com/images/common/h1_logo_personal.jpg" src_ptm="https://www.suhyup-bank.com/images/common/h1_logo_personal.jpg"></A></H1><!-- 개인일경우 --><!-- <p class='welcome biz'>수협은행 경북지역 본점 님</p> --><!-- 로그인 전 버튼  -->
+<UL class=logIn sizset="64" sizcache04287349880459257="10">
+<LI sizset="65" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00262" sizset="66" sizcache04287349880459257="10"><IMG alt=로그인 src="https://www.suhyup-bank.com/images/common/btn_login.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_login.gif"></A></LI>
+<LI sizset="68" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00742" sizset="69" sizcache04287349880459257="10"><IMG alt=공인인증센터 src="https://www.suhyup-bank.com/images/common/btn_cert.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_cert.gif"></A></LI></UL><!--
+		<a href="javascript:test()">.</a>
+		--></DIV>
+<DIV class=menuWrap sizset="0" sizcache04287349880459257="11">
+<DIV class=hTopWrap sizset="72" sizcache04287349880459257="10">
+<H2 class=blind>개인/기업뱅킹선택</H2>
+<UL class=bHMenu sizset="74" sizcache04287349880459257="10">
+<LI sizset="75" sizcache04287349880459257="10"><A class=selected style= href="#nohref" sizset="76" ptm-background-image sizcache04287349880459257="10"><IMG alt=개인 src="https://www.suhyup-bank.com/images/common/m_banking_home_01.gif" src_ptm="https://www.suhyup-bank.com/images/common/m_banking_home_01.gif"></A></LI>
+<LI class=biz sizset="78" sizcache04287349880459257="10"><A style= href="javascript:siteMove();" sizset="79" ptm-background-image sizcache04287349880459257="10"><IMG alt=기업 src="https://www.suhyup-bank.com/images/common/m_banking_home_03.gif" src_ptm="https://www.suhyup-bank.com/images/common/m_banking_home_03.gif"></A></LI></UL>
+<H2 class=blind>수협 안내메뉴</H2>
+<UL class=bCMenu sizset="82" sizcache04287349880459257="10">
+<LI sizset="83" sizcache04287349880459257="10"><A title=새창 href="http://www.suhyup.co.kr/" target=_new sizset="84" sizcache04287349880459257="10"><IMG alt=수협중앙회 src="https://www.suhyup-bank.com/images/common/m_bhmenu_02.gif" src_ptm="https://www.suhyup-bank.com/images/common/m_bhmenu_02.gif"></A></LI>
+<LI sizset="86" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00015" sizset="87" sizcache04287349880459257="10"><IMG alt=은행소개 src="https://www.suhyup-bank.com/images/common/m_bhmenu_03_on.gif" src_ptm="https://www.suhyup-bank.com/images/common/m_bhmenu_03_on.gif"></A></LI>
+<LI sizset="89" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00017" sizset="90" sizcache04287349880459257="10"><IMG alt=고객센터 src="https://www.suhyup-bank.com/images/common/m_bhmenu_04.gif" src_ptm="https://www.suhyup-bank.com/images/common/m_bhmenu_04.gif"></A></LI>
+<LI sizset="92" sizcache04287349880459257="10"><A title=새창 onclick="javascript:openBusinessSearch('real', '1');" href="#" sizset="93" sizcache04287349880459257="10"><IMG alt=영업점안내 src="https://www.suhyup-bank.com/images/common/m_bhmenu_05.gif" src_ptm="https://www.suhyup-bank.com/images/common/m_bhmenu_05.gif"></A></LI>
+<LI sizset="95" sizcache04287349880459257="10"><A href="javascript:goCyberDokdo();" sizset="96" sizcache04287349880459257="10"><IMG alt=독도사이버 src="https://www.suhyup-bank.com/images/common/m_bhmenu_06.gif" src_ptm="https://www.suhyup-bank.com/images/common/m_bhmenu_06.gif"></A></LI><!-- <li><a href="javascript:goMenuPage('PBM01044', '');" title="새창"><img src="https://www.suhyup-bank.com/images/common/m_bhmenu_07.gif" alt="웹접근성 안내" /></a></li>-->
+<LI sizset="98" sizcache04287349880459257="10"><A title=새창 href="javascript:allMenuOpen();" sizset="99" sizcache04287349880459257="10"><IMG alt=전체메뉴 src="https://www.suhyup-bank.com/images/common/m_bhmenu_08.gif" src_ptm="https://www.suhyup-bank.com/images/common/m_bhmenu_08.gif"></A>
+<DIV class=allMenu sizset="101" sizcache04287349880459257="10">
+<UL class=allMenuCon sizset="102" sizcache04287349880459257="10">
+<LI class="depthList depthList1" sizset="103" sizcache04287349880459257="10">개인뱅킹
+<UL sizset="104" sizcache04287349880459257="10">
+<LI sizset="105" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00002">조회</A></LI>
+<LI sizset="107" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00003">이체</A></LI>
+<LI sizset="109" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00004">예금/신탁</A></LI>
+<LI sizset="111" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00005">대출</A></LI>
+<LI sizset="113" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00006">외환</A></LI>
+<LI sizset="115" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00022">펀드</A></LI>
+<LI sizset="117" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00007">공과금</A></LI>
+<LI sizset="119" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00009">부가서비스</A></LI>
+<LI sizset="121" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00992">보안서비스</A></LI></UL></LI>
+<LI class="depthList depthList2" sizset="123" sizcache04287349880459257="10">금융상품
+<UL sizset="124" sizcache04287349880459257="10">
+<LI sizset="125" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00217">예금</A></LI>
+<LI sizset="127" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00218">대출</A></LI>
+<LI sizset="129" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00219">보험</A></LI>
+<LI sizset="131" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00289">펀드</A></LI>
+<LI sizset="133" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00220">신탁</A></LI>
+<LI sizset="135" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM01543">퇴직연금</A></LI>
+<LI sizset="137" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM01597">수산해양금융</A></LI>
+<LI sizset="139" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00222">외환</A></LI>
+<LI sizset="141" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00223">금융패키지몰</A></LI><!-- <li><a href="/ib20/mnu/PBM00224">제규정</a></li> --></UL></LI>
+<LI class="depthList depthList3" sizset="143" sizcache04287349880459257="10">공제보험
+<UL sizset="144" sizcache04287349880459257="10">
+<LI sizset="145" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00225">인터넷창구</A></LI>
+<LI sizset="147" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00226">공제보험상품</A></LI>
+<LI sizset="149" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00227">공제보험대출</A></LI>
+<LI sizset="151" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00228">공시실</A></LI>
+<LI sizset="153" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00229">수협공제소개</A></LI>
+<LI sizset="155" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00230">보험금청구절차안내</A></LI></UL></LI>
+<LI class="depthList depthList4" sizset="157" sizcache04287349880459257="10">수협카드
+<UL sizset="158" sizcache04287349880459257="10">
+<LI sizset="159" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00231">인터넷뱅킹서비스</A></LI>
+<LI sizset="161" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00233">카드소개및신청</A></LI>
+<LI sizset="163" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00235">이벤트/소식</A></LI></UL></LI>
+<LI class="depthList depthList5" sizset="165" sizcache04287349880459257="10">재테크
+<UL sizset="166" sizcache04287349880459257="10">
+<LI sizset="167" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00241">수협경매정보</A></LI></UL></LI>
+<LI class="depthList depthList6" sizset="169" sizcache04287349880459257="10">은행소개
+<UL sizset="170" sizcache04287349880459257="10">
+<LI sizset="171" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00242">은행안내</A></LI>
+<LI sizset="173" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00243">윤리경영</A></LI>
+<LI sizset="175" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00244">경영공시</A></LI>
+<LI sizset="177" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00245">사회공헌</A></LI>
+<LI sizset="179" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00246">홍보센터</A></LI>
+<LI sizset="181" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM01491">인재채용</A></LI>
+<LI sizset="183" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00247">어촌지원행사</A></LI></UL></LI>
+<LI class="depthList depthList7" sizset="185" sizcache04287349880459257="10">전자민원/소비자포털
+<UL sizset="186" sizcache04287349880459257="10">
+<LI sizset="187" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM01457">전자민원신청</A></LI>
+<LI sizset="189" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM01509">민원진행현황조회</A></LI>
+<LI sizset="191" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM01520">소비자보호 우수사례</A></LI>
+<LI sizset="193" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM01521">금융소비자보호체계</A></LI>
+<LI sizset="195" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM01522">민원건수공지</A></LI>
+<LI sizset="197" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM01523">기타</A></LI></UL></LI>
+<LI class="depthList depthList8" sizset="199" sizcache04287349880459257="10">부조리신고
+<UL sizset="200" sizcache04287349880459257="10">
+<LI sizset="201" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM01464">은행직원</A></LI>
+<LI sizset="203" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM01466">일반고객</A></LI></UL></LI>
+<LI class="depthList depthList9" sizset="205" sizcache04287349880459257="10">고객센터
+<UL sizset="206" sizcache04287349880459257="10">
+<LI sizset="207" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00467">이용안내</A></LI>
+<LI sizset="209" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00621">고객상담/문의</A></LI>
+<LI sizset="211" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM01401">고객의말씀</A></LI>
+<LI sizset="213" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00255">사고신고</A></LI>
+<LI sizset="215" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00721">자료실</A></LI>
+<LI sizset="217" sizcache04287349880459257="10"><A href="/ib20/mnu/PBM00257">연말정산서류</A></LI></UL></LI></UL><A class=allMenuClose href="javascript:allMenuClose();" sizset="219" sizcache04287349880459257="10"><IMG alt="전체메뉴 닫기" src="https://www.suhyup-bank.com/images/main_new/btn_close_allmenu.gif" src_ptm="https://www.suhyup-bank.com/images/main_new/btn_close_allmenu.gif"></A> </DIV></LI></UL></DIV>
+<DIV class=bmWrap sizset="0" sizcache04287349880459257="11">
+<H2 class=blind>수협 뱅킹 메뉴</H2><!-- 개인일때 -->
+<UL class="bmMenu bmPsn" sizset="223" sizcache04287349880459257="10">
+<LI class=bm1 sizset="224" sizcache04287349880459257="10"><A style= href="/ib20/mnu/PBM00001" ptm-background-image>개인뱅킹</A></LI>
+<LI class=bm2 sizset="226" sizcache04287349880459257="10"><A style= href="/ib20/mnu/PBM00010" ptm-background-image>금융상품</A></LI>
+<LI class=bm3 sizset="228" sizcache04287349880459257="10"><A style= href="/ib20/mnu/PBM00011" ptm-background-image>공제보험</A></LI>
+<LI class=bm4 sizset="230" sizcache04287349880459257="10"><A style= href="/ib20/mnu/PBM00012" ptm-background-image>수협카드</A></LI>
+<LI class=bm5 sizset="232" sizcache04287349880459257="10"><A style= href="/ib20/mnu/PBM00013" ptm-background-image>재테크</A></LI></UL>
+<FIELDSET class=srhAll style= sizset="0" ptm-background-image sizcache04287349880459257="11"><LEGEND>검색 양식</LEGEND><LABEL class=blind for=srhAll>검색</LABEL> <INPUT class=inputText id=srhAll style="IME-MODE: active" type=text size=23> <INPUT class=inputBtn onclick="javascript:goPageSearch('/ib20/mnu/PBM00636', srhAll.value)" type=image alt=검색 src="https://www.suhyup-bank.com/images/common/btn_srhall.gif" value="" src_ptm="https://www.suhyup-bank.com/images/common/btn_srhall.gif"> </FIELDSET> </DIV>
+<DIV id=gnb sizset="239" sizcache04287349880459257="10">
+<H2 class=blind>개인뱅킹 대메뉴</H2>
+<UL class=gnb style= sizset="241" ptm-background-image jQuery18006408766549537737="15" sizcache04287349880459257="10">
+<LI sizset="242" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00242', 'PB');" sizset="243" jQuery18006408766549537737="8" sizcache04287349880459257="10"><SPAN>은행안내</SPAN></A>
+<DIV class=sm1 style="DISPLAY: none" sizset="245" ptm-background-image sizcache04287349880459257="10">
+<UL style= sizset="246" ptm-background-image sizcache04287349880459257="10">
+<LI sizset="247" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00516', 'PB');" jQuery18006408766549537737="16">CEO소개</A></LI>
+<LI sizset="249" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00517', 'PB');" jQuery18006408766549537737="17">비전 및 경영목표</A></LI>
+<LI sizset="251" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00518', 'PB');" jQuery18006408766549537737="18">조직도</A></LI>
+<LI sizset="253" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00519', 'PB');" jQuery18006408766549537737="19">연혁</A></LI>
+<LI sizset="255" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00523', 'PB');" jQuery18006408766549537737="20">본점위치</A></LI></UL></DIV></LI>
+<LI sizset="257" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00243', 'PB');" sizset="258" jQuery18006408766549537737="9" sizcache04287349880459257="10"><SPAN>윤리경영</SPAN></A>
+<DIV class=sm1 style="DISPLAY: none" sizset="260" ptm-background-image sizcache04287349880459257="10">
+<UL style= sizset="261" ptm-background-image sizcache04287349880459257="10">
+<LI sizset="262" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00536', 'PB');" jQuery18006408766549537737="21">윤리경영필요성</A></LI>
+<LI sizset="264" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00538', 'PB');" jQuery18006408766549537737="22">윤리강령소개</A></LI>
+<LI sizset="266" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00539', 'PB');" jQuery18006408766549537737="23">청렴계약제도</A></LI>
+<LI sizset="268" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00540', 'PB');" jQuery18006408766549537737="24">제안사항접수</A></LI>
+<LI sizset="270" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00541', 'PB');" jQuery18006408766549537737="25">윤리경영프로그램</A></LI></UL></DIV></LI>
+<LI sizset="272" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00244', 'PB');" sizset="273" jQuery18006408766549537737="10" sizcache04287349880459257="10"><SPAN>경영공시</SPAN></A>
+<DIV class=sm1 style="DISPLAY: none" sizset="275" ptm-background-image sizcache04287349880459257="10">
+<UL style= sizset="276" ptm-background-image sizcache04287349880459257="10">
+<LI sizset="277" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00542', 'PB');" jQuery18006408766549537737="26">정기공시</A></LI>
+<LI sizset="279" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00543', 'PB');" jQuery18006408766549537737="27">수시공시</A></LI>
+<LI sizset="281" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00545', 'PB');" jQuery18006408766549537737="28">지배구조내부규범</A></LI>
+<LI sizset="283" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00546', 'PB');" jQuery18006408766549537737="29">신용등급</A></LI></UL></DIV></LI>
+<LI sizset="285" sizcache04287349880459257="10"><A class=selected style= href="javascript:goMenuPage('PBM00245', 'PB');" sizset="286" ptm-background-image jQuery18006408766549537737="11" sizcache04287349880459257="10"><SPAN>사회공헌</SPAN></A>
+<DIV class=sm1 style="DISPLAY: none" sizset="288" ptm-background-image sizcache04287349880459257="10">
+<UL style= sizset="289" ptm-background-image sizcache04287349880459257="10">
+<LI sizset="290" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00547', 'PB');" jQuery18006408766549537737="30">나눔경영소개</A></LI>
+<LI sizset="292" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00537', 'PB');" jQuery18006408766549537737="31">추진경과</A></LI>
+<LI sizset="294" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00548', 'PB');" jQuery18006408766549537737="32">나눔경영활동</A></LI></UL></DIV></LI>
+<LI sizset="296" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00246', 'PB');" sizset="297" jQuery18006408766549537737="12" sizcache04287349880459257="10"><SPAN>홍보센터</SPAN></A>
+<DIV class=sm1 style="DISPLAY: none" sizset="299" ptm-background-image sizcache04287349880459257="10">
+<UL style= sizset="300" ptm-background-image sizcache04287349880459257="10">
+<LI sizset="301" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00551', 'PB');" jQuery18006408766549537737="33">공지사항</A></LI>
+<LI sizset="303" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00552', 'PB');" jQuery18006408766549537737="34">EVENT</A></LI>
+<LI sizset="305" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00553', 'PB');" jQuery18006408766549537737="35">보도자료</A></LI>
+<LI sizset="307" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00520', 'PB');" jQuery18006408766549537737="36">CI</A></LI>
+<LI sizset="309" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00521', 'PB');" jQuery18006408766549537737="37">은행광고</A></LI>
+<LI sizset="311" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00522', 'PB');" jQuery18006408766549537737="38">캐릭터</A></LI></UL></DIV></LI>
+<LI sizset="313" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM01491', 'PB');" sizset="314" jQuery18006408766549537737="13" sizcache04287349880459257="10"><SPAN>인재채용</SPAN></A>
+<DIV class=sm1 style="DISPLAY: none" sizset="316" ptm-background-image sizcache04287349880459257="10">
+<UL style= sizset="317" ptm-background-image sizcache04287349880459257="10">
+<LI sizset="318" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM01492', 'PB');" jQuery18006408766549537737="39">수협은행 인재상</A></LI>
+<LI sizset="320" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM01493', 'PB');" jQuery18006408766549537737="40">채용절차</A></LI>
+<LI sizset="322" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM01494', 'PB');" jQuery18006408766549537737="41">채용공고</A></LI></UL></DIV></LI>
+<LI sizset="324" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00247', 'PB');" sizset="325" jQuery18006408766549537737="14" sizcache04287349880459257="10"><SPAN>어촌지원행사</SPAN></A>
+<DIV class=sm1 style="DISPLAY: none" sizset="327" ptm-background-image sizcache04287349880459257="10">
+<UL style= sizset="328" ptm-background-image sizcache04287349880459257="10">
+<LI sizset="329" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00555', 'PB');" jQuery18006408766549537737="42">사랑해SummerFestival</A></LI>
+<LI sizset="331" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00556', 'PB');" jQuery18006408766549537737="43">사랑해대학생어촌봉사단</A></LI>
+<LI sizset="333" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00554', 'PB');" jQuery18006408766549537737="44">어린이어촌체험행사</A></LI></UL></DIV></LI></UL></DIV></DIV></DIV></DIV><!-- End of JSP View --></DIV></DIV>
+<DIV id=container sizset="335" sizcache02000851658694594="1.8.8" sizcache04287349880459257="10">
+<DIV id=leftArea sizset="336" sizcache04287349880459257="10">
+<DIV id=WID00055 sizset="337" sizcache04287349880459257="10">
+<SCRIPT type=text/javascript>
+
+
+</SCRIPT>
+<!-- Start of JSP View -->
+<FORM name=menuForm id=menuForm method=post sizset="339" autocomplete="off" sizcache04287349880459257="10"><INPUT name=MENU_ID type=hidden> </FORM><!-- 업무 left -->
+<H3 sizset="341" sizcache04287349880459257="10"><SPAN>추진경과</SPAN></H3>
+<P class=copy>고객곁의 행복은행 수협!</P>
+<H2 class=blind>바로가기</H2>
+<UL class=lQuickM sizset="345" sizcache04287349880459257="10">
+<LI class=bdr sizset="346" sizcache04287349880459257="10"><A style= href="javascript:goMenuPage('PBM00464', 'PB');" ptm-background-image>UMS 안내신청</A></LI>
+<LI sizset="348" sizcache04287349880459257="10"><A style= href="javascript:goMenuPage('PBM00590', 'PB');" ptm-background-image>분실사고신고</A></LI></UL>
+<DIV class=cCenter sizset="350" sizcache04287349880459257="10">
+<H2 style= ptm-background-image>고객센터</H2>
+<DL sizset="352" sizcache04287349880459257="10">
+<DT>· 상담전화</DT>
+<DD sizset="354" sizcache04287349880459257="10">1588-1515 <BR>1644-1515</DD>
+<DT>· 해외</DT>
+<DD>82-2-2013-0000</DD>
+<DT>· 공제상담</DT>
+<DD>1588-4119</DD></DL>
+<DIV class=safty sizset="360" sizcache04287349880459257="10"><SPAN sizset="361" sizcache04287349880459257="10"><IMG alt="" src="https://www.suhyup-bank.com/images/common/img_safty.gif" src_ptm="https://www.suhyup-bank.com/images/common/img_safty.gif"> 해킹차단기 작동중</SPAN> </DIV></DIV><!-- End of JSP View --></DIV></DIV>
+<DIV id=contents sizset="363" sizcache02000851658694594="1.8.8" sizcache04287349880459257="10">
+<DIV id=WID00326 sizset="364" sizcache02000851658694594="1.8.8" sizcache04287349880459257="10"><!-- 공통 컴포넌트 Pre Include --><!-- 공통 컴포넌트 Biz Class Include --><!-- 뷰에서만 토큰 발행 --><!-- 팝업이 아닌경우만 --><!-- 이중거래 방지를 위한 토큰 발행 --><!-- 로컬 및 개발서버에만 TEST -->
+<FORM name=tokenForm id=tokenForm method=post sizset="365" autocomplete="off" sizcache04287349880459257="10"><INPUT name=NO_REFRESH_TOKEN id=NO_REFRESH_TOKEN type=hidden value=2e5ca441-52db-45ae-a543-23bad3083009> </FORM><!-- 페이지 정보 -->
+<DIV class=pageInfo sizset="367" sizcache02000851658694594="1.8.8" sizcache04287349880459257="10">
+<DIV class=innerWrap style="VISIBILITY: visible" sizset="368" sizcache02000851658694594="1.8.8" sizcache04287349880459257="10">
+<SCRIPT type=text/javascript>
+/**
+ * 마이메뉴 추가 FILE AJAX
+ * 사이드 메뉴
+ * 2012.12.17
+ * 원정연
+ */
+function myMenuAdd(menuId){
+	var url = "FIL03007";
+	var callFunc = "acrMyMenuAddCallBack(jsonData)";
+
+	$("#myMenuForm > #menuId").val(menuId);
+
+	ajaxActionCall(url, "myMenuForm", callFunc);
+
+}
+
+
+function acrMyMenuAddCallBack(jsonData){
+	var flag = jsonBodyData(jsonData, "FLAG");
+
+	if(flag == "Y"){
+		alert("마이메뉴에 등록하였습니다.");
+	}else{
+		var error_msg = jsonBodyData(jsonData, "ERROR_MSG");
+		alert(error_msg);
+	}
+}
+</SCRIPT>
+
+<UL class=icon sizset="370" sizcache02000851658694594="1.8.8" sizcache04287349880459257="10">
+<LI sizset="371" sizcache04287349880459257="10"><SPAN class=balloon style="VISIBILITY: hidden" sizset="372" ptm-background-image sizcache04287349880459257="10"><SPAN style= ptm-background-image>마이메뉴 추가</SPAN></SPAN></LI>
+<LI sizset="374" sizcache02000851658694594="1.8.8" sizcache04287349880459257="10"><A title="새창으로 열기" class=print id=printmade_print style= onclick="javascript:PTMPrintWebPage({frame_name:'ib20_content_frame', elementid:'#contents'});" href="#nohref" sizset="375" ptm-background-image jQuery18006408766549537737="46" sizcache04287349880459257="10"><SPAN class=balloon style="VISIBILITY: hidden" sizset="376" ptm-background-image sizcache04287349880459257="10"><SPAN style= ptm-background-image>인쇄</SPAN></SPAN></A></LI></UL>
+<P class=loc sizset="378" sizcache04287349880459257="10"><A class=home style= href="/ib20/mnu/PBM00015" ptm-background-image>은행소개</A><A style= href="/ib20/mnu/PBM00245" ptm-background-image>사회공헌</A><SPAN style= ptm-background-image>추진경과</SPAN></P><BR>
+<P class=informer>정보제공담당자 : 고객만족단 손성모 (02-2240-0229) </P></DIV>
+<DIV class=titleBar sizset="384" sizcache04287349880459257="10">
+<H4 class=title>추진경과</H4></DIV></DIV>
+<DIV class=contWrap sizset="386" sizcache04287349880459257="10">
+<DIV class="introHistory clear" sizset="387" sizcache04287349880459257="10">
+<UL class=introYear sizset="388" sizcache04287349880459257="10">
+<LI sizset="389" sizcache04287349880459257="10"><A class=on style= href="#year_2016년" ptm-background-image>2016년</A></LI>
+<LI sizset="391" sizcache04287349880459257="10"><A href="#year_2015년">2015년</A></LI>
+<LI sizset="393" sizcache04287349880459257="10"><A href="#year_2014년">2014년</A></LI>
+<LI sizset="395" sizcache04287349880459257="10"><A href="#year_2013년">2013년</A></LI>
+<LI sizset="397" sizcache04287349880459257="10"><A href="#year_2012년">2012년</A></LI>
+<LI sizset="399" sizcache04287349880459257="10"><A href="#year_2011년">2011년</A></LI>
+<LI sizset="401" sizcache04287349880459257="10"><A href="#year_2010년">2010년</A></LI>
+<LI sizset="403" sizcache04287349880459257="10"><A href="#year_2009년">2009년</A></LI>
+<LI sizset="405" sizcache04287349880459257="10"><A href="#year_2008년">2008년</A></LI>
+<LI sizset="407" sizcache04287349880459257="10"><A href="#year_2007년">2007년</A></LI>
+<LI sizset="409" sizcache04287349880459257="10"><A href="#year_2006년">2006년</A></LI>
+<LI sizset="411" sizcache04287349880459257="10"><A href="#year_2005년">2005년</A></LI></UL>
+<DIV class=fLeft sizset="413" sizcache04287349880459257="10">
+<H5 class=subTitle id=year_2016년>2016년 사회공헌활동 추진경과</H5>
+<UL class=listTypeDash sizset="415" sizcache04287349880459257="10">
+<LI style= ptm-background-image>2016년 1월 사랑해 이웃찾기 행사</LI></UL><BR><BR><BR>
+<H5 class=subTitle id=year_2015년>2015년 사회공헌활동 추진경과</H5>
+<UL class=listTypeDash sizset="421" sizcache04287349880459257="10">
+<LI style= sizset="422" ptm-background-image sizcache04287349880459257="10">2015년 3월 초·중·고등학생 대상 금융교육을 위한 「금융교육 토탈<BR>네트워크」 참여 업무협약 체결</LI>
+<LI style= ptm-background-image>2015년 5월 국립서울현충원 묘역돌보기 자매결연 체결</LI>
+<LI style= ptm-background-image>2015년 5월 초등학생 대상 금융교육실시(달전초, 서령초)</LI>
+<LI style= ptm-background-image>2015년 5월 국립서울현충원 묘역정화활동(현충일)</LI>
+<LI style= ptm-background-image>2015년 7월 사회적기업 지원(물품구매)</LI>
+<LI style= ptm-background-image>2015년 7월 금융취약계층(노년층) 금융교육 실시</LI>
+<LI style= ptm-background-image>2015년 9월 사랑해 이웃찾기(어촌지역 소외계층 생필품 지원)</LI>
+<LI style= ptm-background-image>2015년 9월 국립서울현충원 묘역정화활동(국군의 날)</LI>
+<LI style= ptm-background-image>2015년 10월 적십자바자회 성금기부</LI>
+<LI style= ptm-background-image>2015년 10월 '공원의 친구되는 날' 자원봉사활동(어린이대공원)</LI>
+<LI style= ptm-background-image>2015년 10월 사랑해 헌혈행사</LI>
+<LI style= ptm-background-image>2015년 11월 사회적기업 지원(물품구매)</LI>
+<LI style= ptm-background-image>2015년 11월 아름다운 토요일 행사(아름다운가게 안국점, 송파점, 광화문점)</LI>
+<LI style= ptm-background-image>2015년 11월 은행사랑나눔네트워크 지원</LI>
+<LI style= ptm-background-image>2015년 11월 대학생기숙사(학생종합복지센터) 건립비용 지원</LI>
+<LI style= ptm-background-image>2015년 11월 아름다운 토요일 행사(부산 명륜점)</LI>
+<LI style= ptm-background-image>2015년 12월 '금융권이 함께하는 아름다운 나눔' 행사</LI>
+<LI style= ptm-background-image>2015년 12월 은행권청년창업재단 출연</LI></UL><BR><BR><BR>
+<H5 class=subTitle id=year_2014년>2014년 사회공헌활동 추진경과</H5>
+<UL class=listTypeDash sizset="445" sizcache04287349880459257="10">
+<LI style= ptm-background-image>2014년 1월 사랑해 이웃찾기 행사</LI>
+<LI style= ptm-background-image>2014년 2월 임원 취임 축하 ‘난’ 공매행사 및 수익금 기부(어업인교육문화복지재단)</LI>
+<LI style= ptm-background-image>2014년 2월 어업인교육문화복지재단 어촌복지기금 전달</LI>
+<LI style= ptm-background-image>2014년 5월 독도연구보전협회 독도사랑기금 전달</LI>
+<LI style= ptm-background-image>2014년 6월 사랑해 헌혈 행사 실시</LI>
+<LI style= ptm-background-image>2014년 9월 사랑해 이웃찾기 행사</LI>
+<LI style= ptm-background-image>2014년 9월 대학생 기숙사(학생종합복지센터) 건립비용 지원</LI>
+<LI style= ptm-background-image>2014년 10월 적십자 바자회 성금 기부</LI>
+<LI style= ptm-background-image>2014년 11월 은행사랑나눔네트워크 지원</LI>
+<LI style= ptm-background-image>2014년 12월 아름다운가게 토요일 행사(안국점, 송파점, 광화문책방)</LI>
+<LI style= ptm-background-image>2014년 12월 아름다운가게 토요일 행사(부산 명륜점)</LI>
+<LI style= ptm-background-image>2014년 12월 은행권청년창업재단 출연</LI>
+<LI style= ptm-background-image>2014년 12월 사회적기업 지원(물품구매)</LI>
+<LI style= ptm-background-image>2014년 12월 문화행사 후원(국제여성가족교류재단 주최)</LI></UL><BR><BR><BR>
+<H5 class=subTitle id=year_2013년>2013년 사회공헌활동 추진경과</H5>
+<UL class=listTypeDash sizset="464" sizcache04287349880459257="10">
+<LI style= ptm-background-image>2013년 1월 어업인 구명조끼 지원</LI>
+<LI style= ptm-background-image>2013년 2월 독도경비대 위문 방문</LI>
+<LI style= ptm-background-image>2013년 2월 어업인교육문화복지재단 어촌복지기금 전달</LI>
+<LI style= ptm-background-image>2013년 3월 사랑해 이웃찾기 행사</LI>
+<LI style= ptm-background-image>2013년 4월 독도연구보전협회 독도사랑기금 전달</LI>
+<LI style= ptm-background-image>2013년 5월 해양경찰청 혜성장학회 기부</LI>
+<LI style= ptm-background-image>2013년 6월 올림픽데이 행사 실시</LI>
+<LI style= ptm-background-image>2013년 7월 사랑해 헌혈 행사 실시</LI>
+<LI style= ptm-background-image>2013년 7월 대학생어촌봉사단 자전거해안대장정 실시</LI>
+<LI style= ptm-background-image>2013년 10월 적십자 바자회 성금 기부</LI>
+<LI style= ptm-background-image>2013년 11월 아름다운가게 행사</LI>
+<LI style= ptm-background-image>2013년 11월 은행사랑네트워크 지원</LI>
+<LI style= ptm-background-image>2013년 12월 아름다운가게 행사(부산 명륜역점)</LI></UL><BR><BR><BR>
+<H5 class=subTitle id=year_2012년>2012년 사회공헌활동 추진경과</H5>
+<UL class=listTypeDash sizset="482" sizcache04287349880459257="10">
+<LI style= ptm-background-image>2012년 1월 사랑해 이웃찾기 행사</LI>
+<LI style= ptm-background-image>2012년 2월 제주지역 어촌자녀 장학금 전달</LI>
+<LI style= ptm-background-image>2012년 2월 어업인교육문화복지재단 어촌복지기금 전달</LI>
+<LI style= ptm-background-image>2012년 3월 해양경찰청 혜성장학회 기부</LI>
+<LI style= ptm-background-image>2012년 4월 독도연구보전협회 독도사랑기금 전달</LI>
+<LI style= ptm-background-image>2012년 5월 해우리봉사활동 실시</LI>
+<LI style= ptm-background-image>2012년 6월 은행권청년창업재단 출연</LI>
+<LI style= ptm-background-image>2012년 7월 대학생어촌봉사단 자전거해안대장정 실시</LI>
+<LI style= ptm-background-image>2012년 9월 사랑해 헌혈행사 실시</LI>
+<LI style= ptm-background-image>2012년 10월 적십자바자회 성금 기부</LI>
+<LI style= ptm-background-image>2012년 11월 아름다운가게 행사</LI>
+<LI style= ptm-background-image>2012년 11월 은행사랑네트워크 지원</LI>
+<LI style= ptm-background-image>2012년 12월 어민사랑기금 (대한법률구조공단) 출연</LI></UL><BR><BR><BR>
+<H5 class=subTitle id=year_2011년>2011년 사회공헌활동 추진경과</H5>
+<UL class=listTypeDash sizset="500" sizcache04287349880459257="10">
+<LI style= ptm-background-image>2011년 1월 푸른산타봉사단 활동 실시</LI>
+<LI style= ptm-background-image>2011년 1월 서해5도 어촌자녀 장학금 전달</LI>
+<LI style= ptm-background-image>2011년 3월 독도연구보전협회 독도사랑기금 전달</LI>
+<LI style= ptm-background-image>2011년 4월 어업인교육문화복지재단 어촌복지기금 전달</LI>
+<LI style= ptm-background-image>2011년 6월 사랑해 헌혈행사 실시</LI>
+<LI style= ptm-background-image>2011년 6월 올림픽데이런 행사</LI>
+<LI style= ptm-background-image>2011년 7월 대학생어촌봉사단 활동 실시</LI>
+<LI style= ptm-background-image>2011년 9월 사랑해 이웃찾기 행사</LI>
+<LI style= ptm-background-image>2011년 10월 해우리봉사활동 실시</LI>
+<LI style= ptm-background-image>2011년 11월 아름다운가게 행사</LI>
+<LI style= ptm-background-image>2011년 11월 은행사랑네트워크 지원</LI>
+<LI style= ptm-background-image>2011년 11월 적십자바자회 성금 기부</LI>
+<LI style= ptm-background-image>2011년 12월 어민사랑기금 (대한법률구조공단) 출연</LI></UL><BR><BR><BR>
+<H5 class=subTitle id=year_2010년>2010년 사회공헌활동 추진경과</H5>
+<UL class=listTypeDash sizset="518" sizcache04287349880459257="10">
+<LI style= ptm-background-image>2010년 3월 독도사랑기금 전달</LI>
+<LI style= ptm-background-image>2010년 4월 창립기념 나눔행사 실시</LI>
+<LI style= ptm-background-image>2010년 6월 사랑해 헌혈행사 실시</LI>
+<LI style= ptm-background-image>2010년 6월 대학생어촌봉사단 사량도 활동 및 사랑해 쌀 지원</LI>
+<LI style= ptm-background-image>2010년 9월 사랑해 이웃찾기 고흥군 방문</LI></UL><BR><BR><BR>
+<H5 class=subTitle id=year_2009년>2009년 사회공헌활동 추진경과</H5>
+<UL class=listTypeDash sizset="528" sizcache04287349880459257="10">
+<LI style= ptm-background-image>2009년 3월 독도사랑기금 전달</LI>
+<LI style= ptm-background-image>2009년 4월 임원 취임 축하 '난' 공매행사 및 수익금 기부</LI>
+<LI style= ptm-background-image>2009년 4월 송파장애인의 날 후원</LI>
+<LI style= ptm-background-image>2009년 9월 사랑해 이웃찾기 행사</LI>
+<LI style= ptm-background-image>2009년 11월 아름다운가게 행사</LI>
+<LI style= ptm-background-image>2009년 12월 어민사랑기금(대한법률구조공단)출연</LI>
+<LI style= ptm-background-image>2009년 12월 2009년 윤리경영상 수상자 선정</LI>
+<LI style= ptm-background-image>2009년 12월 푸른산타봉사단 활동 실시</LI>
+<LI style= ptm-background-image>2009년 12월 나눔경영 사진전 개회</LI></UL><BR><BR><BR>
+<H5 class=subTitle id=year_2008년>2008년 사회공헌활동 추친경과</H5>
+<UL class=listTypeDash sizset="542" sizcache04287349880459257="10">
+<LI style= ptm-background-image>2008년 3월 독도사랑기금 전달</LI>
+<LI style= ptm-background-image>2008년 4월 송파장애인의 날 후원</LI>
+<LI style= ptm-background-image>2008년 6월 바다의날-여수엑스포 후원</LI>
+<LI style= ptm-background-image>2008년 6월 중국지진피해성금</LI>
+<LI style= ptm-background-image>2008년 10월 사랑海 헌혈 행사 실시</LI>
+<LI style= ptm-background-image>2008년 11월 아름다운가게 행사</LI>
+<LI style= ptm-background-image>2008년 12월 어민사랑기금(대한법률구조공단)출연</LI>
+<LI style= ptm-background-image>2008년 12월 2008년 윤리경영상 수상자 선정</LI>
+<LI style= ptm-background-image>2008년 12월 나눔경영 사진전 개최</LI></UL><BR><BR><BR>
+<H5 class=subTitle id=year_2007년>2007년 사회공헌활동 추진경과</H5>
+<UL class=listTypeDash sizset="556" sizcache04287349880459257="10">
+<LI style= ptm-background-image>2007년 5월 독도사랑 기금전달</LI>
+<LI style= ptm-background-image>2007년 7월 은행사랑 나눔네트워크 지원(1차)</LI>
+<LI style= ptm-background-image>2007년 8월 2007년 사랑海 썸머 페스티발 개최</LI>
+<LI style= ptm-background-image>2007년 9월 울릉군민과 함께하는 문화나눔콘서트 후원</LI>
+<LI style= ptm-background-image>2007년 9월 아름다운가게 행사</LI>
+<LI style= ptm-background-image>2007년 10월 제2차 사랑海 헌혈 행사 실시</LI>
+<LI style= ptm-background-image>2007년 11월 은행사랑 나눔네트워크 지원(2차)</LI>
+<LI style= ptm-background-image>2007년 11월 어민사랑기금(대한법률구조공단)출연</LI>
+<LI style= ptm-background-image>2007년 12월 2007년 윤리경영상 수상자 선정</LI>
+<LI style= ptm-background-image>2007년 12월 나눔경영 사진전 개최</LI></UL><BR><BR><BR>
+<H5 class=subTitle id=year_2006년>2006년 사회공헌활동 추진경과</H5>
+<UL class=listTypeDash sizset="571" sizcache04287349880459257="10">
+<LI style= ptm-background-image>2006년 5월 독도사랑기금 전달</LI>
+<LI style= ptm-background-image>2006년 5월 제1차 사랑海 헌혈실시</LI>
+<LI style= ptm-background-image>2006년 6월 '전국푸른바다가꾸기' 운동 실시</LI>
+<LI style= ptm-background-image>2006년 6월 '푸른수협 한마음봉사단' 출범</LI>
+<LI style= ptm-background-image>2006년 8월 2006 사랑海 썸머페스티발 개최</LI>
+<LI style= ptm-background-image>2006년 9월 나눔과 사랑의 사회공헌 프로그램 '아름다운토요일' 행사 실시</LI>
+<LI style= ptm-background-image>2006년 11월 제2차 사랑海 헌혈 행사 실시</LI>
+<LI style= ptm-background-image>2006년 12월 2006년 윤리경영상 수상자 선정</LI>
+<LI style= ptm-background-image>2006년 12월 나눔경영 사진전 개최</LI></UL><BR><BR><BR>
+<H5 class=subTitle id=year_2005년>2005년 사회공헌활동 추진경과</H5>
+<UL class=listTypeDash sizset="585" sizcache04287349880459257="10">
+<LI style= ptm-background-image>2005년 2월 설맞이 불우이웃돕기 행사 실시</LI>
+<LI style= ptm-background-image>2005년 5월 해양수산가족 100사 100촌 자매결연행상</LI>
+<LI style= ptm-background-image>2005년 6월 2005 푸른바다가꾸기 행사</LI>
+<LI style= ptm-background-image>2005년 6월 수협임직원의 '사랑의 각막기증 신청서' 전달</LI>
+<LI style= ptm-background-image>2005년 7월 여름휴가 어촌에서보내기 캠페인</LI>
+<LI style= ptm-background-image>2005년 8월 2005 사랑海 썸머 페스티벌 개최</LI>
+<LI style= ptm-background-image>2005년 11월 클린카드제 도입 실시</LI>
+<LI style= ptm-background-image>2005년 12월 2005 '사랑海 헌혈' 실시</LI>
+<LI style= ptm-background-image>2005년 12월 2005 윤리경영상 수상대상자 선정</LI>
+<LI style= ptm-background-image>2005년 12월 윤리준법 자기점검프로그램 도입 및 실시</LI>
+<LI style= ptm-background-image>2005년 12월 나눔경영활동 사진전 개최</LI></UL><BR><BR><BR>
+<H5 class=subTitle id=year_2004년>2004년 사회공헌활동 추진경과</H5>
+<UL class=listTypeDash sizset="601" sizcache04287349880459257="10">
+<LI style= ptm-background-image>2004년 1월 UP DOWN 10 운동 실시</LI>
+<LI style= ptm-background-image>2004년 3월 임직원 자기혁신을 위한 자기헌장 관리 실시</LI>
+<LI style= ptm-background-image>2004년 4월 사랑의 계좌이체 운동 실시 백혈병소아암협회 후원</LI>
+<LI style= ptm-background-image>2004년 5월 설문조사 시스템 구축</LI>
+<LI style= ptm-background-image>2004년 10월 사랑의 헌혈운동 실시</LI>
+<LI style= ptm-background-image>2004년 11월 NICE 사회봉사상 및 자기헌장 관리 우수자 선정</LI></UL></DIV></DIV></DIV></DIV></DIV>
+<DIV class=w20 id=aside sizset="608" sizcache04287349880459257="10">
+<DIV class="aWrap w20" id=WID00141 sizset="609" sizcache04287349880459257="10">
+<SCRIPT type=text/javascript>
+	// WIDGET DIV 가 한번 쌓기 때문에 css 깨짐 방지
+	$("#WID00141").addClass("aWrap w20");
+
+</SCRIPT>
+<!-- Start of JSP View --><A title="마이메뉴 레이어팝업 열기" class="btn btnMyMenu" onclick="asideOpen(this);  ajaxMyMenu();" href="#myMenu" sizset="611" sizcache04287349880459257="10"><IMG class=png alt=마이메뉴 src="https://www.suhyup-bank.com/images/common/btn_aside_open_01.png" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_open_01.png"></A>
+<DIV class="asideLayer myMenu" id=myMenu style= sizset="613" ptm-background-image sizcache04287349880459257="10"><!-- myMenuForm -->
+<FORM name=myMenuForm id=myMenuForm method=post sizset="614" autocomplete="off" sizcache04287349880459257="10"><INPUT name=ib20_cur_mnu type=hidden value=PBM00537> <INPUT name=ib20_cur_wpt id=ib20_cur_wpt type=hidden value=WID00141> <INPUT name=menuId id=menuId type=hidden>
+<P class=login sizset="618" sizcache04287349880459257="10"><A href="#nohref" sizset="619" sizcache04287349880459257="10"><IMG alt=로그인 src="https://www.suhyup-bank.com/images/common/btn_aside_layer_login.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_layer_login.gif"></A> <A href="#nohref" sizset="621" sizcache04287349880459257="10"><IMG alt=초기화 src="https://www.suhyup-bank.com/images/common/btn_aside_layer_reset.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_layer_reset.gif"></A></P>
+<H2 sizset="623" sizcache04287349880459257="10"><IMG alt=마이메뉴 src="https://www.suhyup-bank.com/images/common/h2_aside_mymenu.gif" src_ptm="https://www.suhyup-bank.com/images/common/h2_aside_mymenu.gif"></H2>
+<UL sizset="625" sizcache04287349880459257="10">
+<LI sizset="626" sizcache04287349880459257="10"><A class=fLeft href="#nohref">인터넷뱅킹 가이드</A><A class=fRight href="#nohref" sizset="628" sizcache04287349880459257="10"><IMG alt="마이메뉴에서 삭제" src="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif"></A></LI>
+<LI sizset="630" sizcache04287349880459257="10"><A class=fLeft href="#nohref">금리안내</A><A class=fRight href="#nohref" sizset="632" sizcache04287349880459257="10"><IMG alt="마이메뉴에서 삭제" src="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif"></A></LI>
+<LI sizset="634" sizcache04287349880459257="10"><A class=fLeft href="#nohref">수수료안내</A><A class=fRight href="#nohref" sizset="636" sizcache04287349880459257="10"><IMG alt="마이메뉴에서 삭제" src="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif"></A></LI>
+<LI sizset="638" sizcache04287349880459257="10"><A class=fLeft href="#nohref">맞춤상품설계</A><A class=fRight href="#nohref" sizset="640" sizcache04287349880459257="10"><IMG alt="마이메뉴에서 삭제" src="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif"></A></LI>
+<LI sizset="642" sizcache04287349880459257="10"><A class=fLeft href="#nohref">수수료안내</A><A class=fRight href="#nohref" sizset="644" sizcache04287349880459257="10"><IMG alt="마이메뉴에서 삭제" src="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif"></A></LI>
+<LI sizset="646" sizcache04287349880459257="10"><A class=fLeft href="javascript:goMenuPage('PBM01018', 'PB');">금융계산기</A><A class=fRight href="#nohref" sizset="648" sizcache04287349880459257="10"><IMG alt="마이메뉴에서 삭제" src="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif"></A></LI></UL>
+<P class=btnLayerClose sizset="650" sizcache04287349880459257="10"><A onclick=asideClose(); href="#nohref" sizset="651" sizcache04287349880459257="10"><IMG alt="마이메뉴 닫기" src="https://www.suhyup-bank.com/images/common/btn_aside_layer_close.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_layer_close.gif"></A></P></FORM></DIV><A title="간편조회 레이어팝업 열기" class="btn btnQckSrh" id=speedInqy onclick=asideOpen(this); href="#qSrh" sizset="653" jQuery18006408766549537737="3" sizcache04287349880459257="10"><IMG class=png alt=간편조회 src="https://www.suhyup-bank.com/images/common/btn_aside_open_02.png" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_open_02.png"></A>
+<DIV class="asideLayer quickSearch" id=qSrh style= sizset="655" ptm-background-image sizcache04287349880459257="10"><!-- qSrhForm
+		<form name="qSrhForm" id="qSrhForm" method="post">-->
+<H2 sizset="656" sizcache04287349880459257="10"><IMG alt=간편조회 src="https://www.suhyup-bank.com/images/common/h2_aside_qsrh.gif" src_ptm="https://www.suhyup-bank.com/images/common/h2_aside_qsrh.gif"></H2>
+<DL class=tabStyle style= sizset="658" ptm-background-image sizcache04287349880459257="10">
+<DT class="tMenu selected" sizset="659" sizcache04287349880459257="10"><A id=speed01 href="#nohref" jQuery18006408766549537737="45">예금잔액조회</A></DT>
+<DD class=tCont sizset="661" sizcache04287349880459257="10"><IFRAME width="100%" height=1000 title=예금잔액조회 id=main_Speed01 frameBorder=0 src_local_ptm="2.html"></IFRAME></DD>
+<DT class="tMenu tm2" sizset="663" sizcache04287349880459257="10"><A id=speed02 href="#nohref" jQuery18006408766549537737="4">예금거래내역조회</A></DT>
+<DD class=tCont sizset="665" sizcache04287349880459257="10"><IFRAME width="100%" height=1000 title=예금거래내역조회 id=main_Speed02 frameBorder=0 src_local_ptm="3.html"></IFRAME></DD>
+<DT class="tMenu tm3" sizset="667" sizcache04287349880459257="10"><A id=speed03 href="#nohref" jQuery18006408766549537737="5">자기앞수표조회</A></DT>
+<DD class=tCont sizset="669" sizcache04287349880459257="10"><IFRAME width="100%" height=1000 title=자기앞수표조회 id=main_Speed03 frameBorder=0 src_local_ptm="4.html"></IFRAME></DD>
+<DT class="tMenu tm4" sizset="671" sizcache04287349880459257="10"><A id=speed04 href="#nohref" jQuery18006408766549537737="6">환율정보조회</A></DT>
+<DD class=tCont sizset="673" sizcache04287349880459257="10"><IFRAME width="100%" height=1000 title=환율정보조회 id=main_Speed04 frameBorder=0 src_local_ptm="5.html"></IFRAME></DD>
+<DT class="tMenu tm5 last" sizset="675" sizcache04287349880459257="10"><A id=speed05 href="#nohref" jQuery18006408766549537737="7">신탁수익률조회</A></DT>
+<DD class=tCont sizset="677" sizcache04287349880459257="10"><IFRAME width="100%" height=1000 title=신탁수익률조회 id=main_Speed05 frameBorder=0 src_local_ptm="6.html"></IFRAME></DD></DL>
+<P class=btnLayerClose sizset="679" sizcache04287349880459257="10"><A onclick=asideClose(); href="#nohref" sizset="680" sizcache04287349880459257="10"><IMG alt="간편조회 닫기" src="https://www.suhyup-bank.com/images/common/btn_aside_layer_close.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_layer_close.gif"></A></P><!-- </form> --></DIV><!--
+	<a href="#siteMap" id="siteMapBtn" onclick="asideOpen(this);" title="전체메뉴 레이어팝업 열기" class="btn btnSiteMap"><img src="https://www.suhyup-bank.com/images/main_new/btn_aside_new_03.png"src="https://www.suhyup-bank.com/images/common/btn_aside_open_03.png" alt="전체메뉴" class="png" /></a>
+	<div class="asideLayer siteMap" id="siteMap">
+		<form name="siteMapForm" id="siteMapForm" method="post">
+			<input type="hidden" name="ib20_cur_mnu" id="ib20_cur_mnu" value=""/>
+			<input type="hidden" name="ib20_cur_wgt" value="">
+		</form>
+	</div>
+	 --><A title="오늘본상품 레이어팝업 열기" class="btn btnToday" id=todayItemBtn onclick=asideOpen(this); href="#todayItem" sizset="682" jQuery18006408766549537737="2" sizcache04287349880459257="10"><IMG class=png alt=오늘본상품 src="https://www.suhyup-bank.com/images/common/btn_aside_open_04.png" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_open_04.png"></A>
+<DIV class="asideLayer todayItem" id=todayItem style= sizset="684" ptm-background-image sizcache04287349880459257="10"><!-- todayItemForm -->
+<FORM name=todayItemForm id=todayItemForm method=post sizset="685" autocomplete="off" sizcache04287349880459257="10">
+<H2 sizset="686" sizcache04287349880459257="10"><IMG alt=오늘본상품 src="https://www.suhyup-bank.com/images/common/h2_aside_today.gif" src_ptm="https://www.suhyup-bank.com/images/common/h2_aside_today.gif"></H2>
+<UL id=todayItemUl sizset="688" sizcache04287349880459257="10">
+<LI sizset="689" sizcache04287349880459257="10"><A class=fLeft href="#nohref">인터넷뱅킹 가이드</A><A class=fRight href="#nohref" sizset="691" sizcache04287349880459257="10"><IMG alt="오늘본상품에서 삭제" src="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif"></A></LI>
+<LI sizset="693" sizcache04287349880459257="10"><A class=fLeft href="#nohref">금리안내</A><A class=fRight href="#nohref" sizset="695" sizcache04287349880459257="10"><IMG alt="오늘본상품에서 삭제" src="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif"></A></LI>
+<LI sizset="697" sizcache04287349880459257="10"><A class=fLeft href="#nohref">수수료안내</A><A class=fRight href="#nohref" sizset="699" sizcache04287349880459257="10"><IMG alt="오늘본상품에서 삭제" src="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif"></A></LI>
+<LI sizset="701" sizcache04287349880459257="10"><A class=fLeft href="#nohref">맞춤상품설계</A><A class=fRight href="#nohref" sizset="703" sizcache04287349880459257="10"><IMG alt="오늘본상품에서 삭제" src="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif"></A></LI>
+<LI sizset="705" sizcache04287349880459257="10"><A class=fLeft href="#nohref">수수료안내</A><A class=fRight href="#nohref" sizset="707" sizcache04287349880459257="10"><IMG alt="오늘본상품에서 삭제" src="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif"></A></LI>
+<LI sizset="709" sizcache04287349880459257="10"><A class=fLeft href="#nohref">금융계산기</A><A class=fRight href="#nohref" sizset="711" sizcache04287349880459257="10"><IMG alt="오늘본상품에서 삭제" src="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_mm_del.gif"></A></LI></UL>
+<P class=btnLayerClose sizset="713" sizcache04287349880459257="10"><A onclick=asideClose(); href="#nohref" sizset="714" sizcache04287349880459257="10"><IMG alt="오늘본상품 닫기" src="https://www.suhyup-bank.com/images/common/btn_aside_layer_close.gif" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_layer_close.gif"></A></P></FORM></DIV><A title="상품공시실 이동" class="btn btnProduct" id=productItemBtn href=" /ib20/mnu/PBM00558" sizset="716" sizcache04287349880459257="10"><IMG class=png alt=상품공시실 src="https://www.suhyup-bank.com/images/common/btn_aside_open_07.png" src_ptm="https://www.suhyup-bank.com/images/common/btn_aside_open_07.png"></A> <!-- 오늘본상품출력 -->
+<SCRIPT type=text/javascript>
+	// 전체메뉴 클릭시 해당 스크립트 실행
+	$("#siteMapBtn").click(function(){
+		var url = "WID03129";
+		var callFunc = "siteMenuCallBank(jsonData)";
+		ajaxWidgetCall(url, "siteMapForm", callFunc);
+	});
+	var menuViewCnt = 0;
+	function siteMenuCallBank(jsonData){
+		if(menuViewCnt == 0){
+			var htmlValue = jsonData;
+			//$("#siteMap").show();
+			$("#siteMap").html(htmlValue);
+			menuViewCnt++;
+		}
+	}
+
+	// 오늘본상품 클릭시 해당 스크립트 실행
+	$("#todayItemBtn").click(function(){ productNotify('PB') });
+	$("#speedInqy").click(function(){
+		$("#speed01").click(function(){
+			$("#main_Speed01").attr("src", "/ib20/mnu/PBM00883");
+		}).click();
+	});
+
+	$("#speed02").click(function(){
+		$("#main_Speed02").attr("src", "/ib20/mnu/PBM00890");
+	});
+
+	$("#speed03").click(function(){
+		$("#main_Speed03").attr("src", "/ib20/mnu/PBM00891");
+	});
+
+	$("#speed04").click(function(){
+		$("#main_Speed04").attr("src", "/ib20/mnu/PBM00892");
+	});
+
+	$("#speed05").click(function(){
+		$("#main_Speed05").attr("src", "/ib20/mnu/PBM00893");
+	});
+</SCRIPT>
+<!-- End of JSP View --></DIV></DIV></DIV>
+<DIV id=footer style= sizset="719" ptm-background-image sizcache04287349880459257="10">
+<DIV id=WID00142 sizset="720" sizcache04287349880459257="10"><!-- 메인공지 -->
+<SCRIPT type=text/javascript>
+//<![CDATA[
+	if('PB' == 'PB' && 'PBM00537' == 'PBM00054'){
+		openNoticePopup('PBM00537', 'PB', "noticePopFrm");
+	}
+//]]>
+</SCRIPT>
+<!-- 툴팁팝업용 --><!-- Start of JSP View -->
+<FORM name=popFrm id=popFrm method=post sizset="722" autocomplete="off" sizcache04287349880459257="10"><INPUT name=ib20_cur_mnu type=hidden value=PBM00537> <INPUT name=ib20_cur_wgt type=hidden value=WID00142> </FORM><!-- 레이어팝업 샘플 1 -->
+<FORM name=autologin id=autologin method=post sizset="725" autocomplete="off" sizcache04287349880459257="10"><INPUT name=toUrl type=hidden value=/> <INPUT name=curUrl type=hidden value=/ib20/mnu/PBM00537> <INPUT name=intMaxInactiveInterval id=intMaxInactiveInterval type=hidden value=600>
+<DIV class=lpop id=__lpop__ style="DISPLAY: none" sizset="729" sizcache04287349880459257="10">
+<DL sizset="730" sizcache04287349880459257="10">
+<DT class=lpopTitle style= ptm-background-image>자동로그아웃 연장안내</DT>
+<DD class=lpopCont sizset="732" sizcache04287349880459257="10">
+<DIV class=popSWrap sizset="733" sizcache04287349880459257="10">
+<P class=gBox sizset="734" sizcache04287349880459257="10"><IMG alt="" src="https://www.suhyup-bank.com/images/contents/bg_notice.gif" src_ptm="https://www.suhyup-bank.com/images/contents/bg_notice.gif"> <STRONG sizset="736" sizcache04287349880459257="10"><EM sizset="737" sizcache04287349880459257="10"><SPAN id=afterSS>60</SPAN>초</EM> 후 자동 로그아웃 됩니다.</STRONG><BR><BR><SPAN class=fs11>다시 이용하시려면 로그인 연장 버튼을 클릭하세요.</SPAN></P>
+<P class=btnlPop sizset="742" sizcache04287349880459257="10"><A class=btnW style= href="javascript:__LoginProc(1);" sizset="743" ptm-background-image sizcache04287349880459257="10"><SPAN style= ptm-background-image>로그인연장</SPAN></A> <A class=btnN style= href="javascript:__LoginProc(2);" sizset="745" ptm-background-image sizcache04287349880459257="10"><SPAN style= ptm-background-image>로그아웃</SPAN></A></P><BR>
+<P class=botNot sizset="748" sizcache04287349880459257="10">기타 궁금하신 사항은 수협은행 <BR>고객센터 <STRONG>(TEL 1588-1515/1644-1515)</STRONG>로 문의하여 주시기 바랍니다.</P></DIV></DD></DL>
+<P class=btnCloseAddFunc sizset="751" sizcache04287349880459257="10"><A href="javascript:__LoginProc(1);" sizset="752" sizcache04287349880459257="10"><IMG alt="레이어팝업 닫기" src="https://www.suhyup-bank.com/images/contents/btn_lpop_close.gif" src_ptm="https://www.suhyup-bank.com/images/contents/btn_lpop_close.gif"></A></P><!-- //12.21 변경 --></DIV></FORM><!-- 공통 컴포넌트 Post Include --><!-- 오토 로그아웃 -->
+<DIV id=newFooter sizset="754" sizcache04287349880459257="10">
+<DIV class=addWrap style= sizset="755" ptm-background-image sizcache04287349880459257="10">
+<P class=logo sizset="756" sizcache04287349880459257="10"><IMG alt=SH수협은행 src="https://www.suhyup-bank.com/images/common/logo_footer.gif" src_ptm="https://www.suhyup-bank.com/images/common/logo_footer.gif"></P>
+<DIV class=innerWrap sizset="758" sizcache04287349880459257="10">
+<UL sizset="759" sizcache04287349880459257="10">
+<LI class=first sizset="760" sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00534', 'PB');">개인정보처리방침</A></LI>
+<LI style= sizset="762" ptm-background-image sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM01042', 'PB');">전자금융거래기본약관</A></LI>
+<LI style= sizset="764" ptm-background-image sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00248', 'PB');">상품공시실</A></LI>
+<LI style= sizset="766" ptm-background-image sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM01017', 'PB');">전자금융거래이용자 10계명</A></LI><!-- <li><a href="javascript:goMenuPage('PBM01043', 'PB');">스마트폰 금융거래 10계명</a></li> -->
+<LI style= sizset="768" ptm-background-image sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM01047', 'PB');">보호금융상품등록부</A></LI>
+<LI style= sizset="770" ptm-background-image sizcache04287349880459257="10"><A href="javascript:goMenuPage('PBM00467', 'PB');">이용안내</A></LI>
+<LI style= sizset="772" ptm-background-image sizcache04287349880459257="10"><A title=웹접근성안내 href="javascript:goMenuPage('PBM01044', 'PB');">웹접근성안내</A></LI></UL>
+<DIV class=copyrightWrap sizset="774" sizcache04287349880459257="10">
+<P class=pNumGuide sizset="775" sizcache04287349880459257="10">고객지원 : <STRONG>1588-1515</STRONG> / <STRONG>1644-1515</STRONG> 해외이용 <STRONG>82-2-2013-0000</STRONG> 공제보험 <STRONG>1588-4119</STRONG></P>
+<P class=copyright>Copyrights 2013 NATIONAL FEDERATION OF FISHERIES COOPERATIVES. ALL RIGHTS RESERVED.</P></DIV></DIV></DIV></DIV><!-- 해당로직은 레이어팝업 하단에 위치해야 함. --><!-- 전문에러처리 -->
+<FORM name=errFrom id=errFrom method=post sizset="781" autocomplete="off" sizcache04287349880459257="10"><INPUT name=errorCode id=errorCode type=hidden value=null> <INPUT name=errorMessage id=errorMessage type=hidden value=null> <INPUT name=ERROR_PROCESS_FLAG id=ERROR_PROCESS_FLAG type=hidden value=null> <INPUT name=IS_POPUP_MENU id=IS_POPUP_MENU type=hidden value=null> </FORM>
+<SCRIPT type=text/javascript>
+	if('false' == 'true'){
+		var errorCode		= 'null';		//Exception에 담은 에러 코드
+		var errorMessage	= 'null';	//Exception에 담은 에러 메시지 : URLEncoding 되어 있음(Charset UTF-8)
+
+
+			// 컨텐츠 메인, 컨텐츠 페이지
+			error_layer_open(errorCode, errorMessage);
+
+
+
+	}
+</SCRIPT>
+<!-- End of JSP View --></DIV></DIV></DIV>
+<OBJECT width=1 height=1 align=center id=ptm_plugin classid=clsid:8C4D012A-9B6C-4B87-A7CB-724BD7A9727C codeBase="/printMade/download_files/Windows/Printmade2.ocx" vspace=0 hspace=0 declare style="DISPLAY: none"><PARAM NAME="Visible" VALUE="0"><PARAM NAME="AutoScroll" VALUE="0"><PARAM NAME="AutoSize" VALUE="0"><PARAM NAME="AxBorderStyle" VALUE="1"><PARAM NAME="Caption" VALUE="r"><PARAM NAME="Color" VALUE="4278190095"><PARAM NAME="Font" VALUE="Tahoma"><PARAM NAME="KeyPreview" VALUE="0"><PARAM NAME="PixelsPerInch" VALUE="96"><PARAM NAME="PrintScale" VALUE="1"><PARAM NAME="Scaled" VALUE="-1"><PARAM NAME="DropTarget" VALUE="0"><PARAM NAME="HelpFile" VALUE=""><PARAM NAME="PopupMode" VALUE="0"><PARAM NAME="ScreenSnap" VALUE="0"><PARAM NAME="SnapBuffer" VALUE="10"><PARAM NAME="DockSite" VALUE="0"><PARAM NAME="DoubleBuffered" VALUE="0"><PARAM NAME="UseDockManager" VALUE="0"><PARAM NAME="Enabled" VALUE="-1"><PARAM NAME="AlignWithMargins" VALUE="0"><PARAM NAME="vSource" VALUE=""><PARAM NAME="vMode" VALUE="0"></OBJECT></BODY></HTML>

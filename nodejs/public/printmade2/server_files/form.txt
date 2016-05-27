@@ -1,0 +1,16 @@
+{
+	"bottom":{
+		"width":"100%",
+		"height": 100
+	},
+	"bottomImgs":[
+		{
+			"type":"image",
+			"url":"https://www.suhyup-bank.com/printMade/server_files/contents_logo.jpg",
+			"align":"right",
+			"valign":"top",
+			"width" : 105,
+			"height" : 29
+		}
+	]
+}

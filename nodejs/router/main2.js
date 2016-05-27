@@ -30,11 +30,13 @@ module.exports = function(app, fs)
 
     //mysql test page
     app.get('/index4',function(req,res){
-      var query = connection.query('select * from testtable where serial < 100',function(err,rows){
-          for(var i=0;i<rows.length;i++){
-            console.log(rows[i]);
-          }
-      });
+      sess = req.session;
+      res.render('index4', {
+           title: "MY HOMEPAGE",
+           name: sess.name,
+           username: sess.username,
+           active : 'home',
+       });
     });
 
 

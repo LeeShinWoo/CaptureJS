@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+/*
+function PTMAnt(){
+	this.aaa = arguments[0];
+}
+PTMAnt.prototype.test = function(){
+	alert(this.aaa);
+}
+PTMAnt.prototype.test2 = function(){
+	this.test();
+	alert('test2');
+}
+var abc = new PTMAnt('이신우');
+abc.test2();
+*/
+function Car(make, model, year, owner) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+  this.owner = owner;
+}
+function con(){
+	var car1 = new Car("Eagle", "Talon TSi", 1993, "");
+	var car2 = new Car("Nissan", "300ZX", 1992, "");
+	car3 = new Car("ferary", "300ZX", 1888, "");
+	console.log(car1);
+	console.log(car2);
+	console.log(car3);
+}
+
+con();
+
+function car3change(){
+	car3.make = "이신우";
+}
+car3change();
+console.log(car3);
+
+function f(y) { return this.x + y};
+o = {x : 1};
+g = f.bind(o);
+console.log(g(3));
+var name = 'bill';
+
+function foo(msg,msg2) {
+
+	console.log(msg + '  ' + msg2);
+
+	console.log(this.name);
+	console.log(this.make);
+}
+
+foo('normal call','default');
+var mycar = {make: "Honda", model: "Accord", year: 1998, name : '이신우'};
+var obj = {
+	name : 'steve'
+}
+foo.call(obj,'call function','object'); //인자를 그냥 전달합니다.
+foo.apply(obj,['apply function','object']); //인자를 배열형태로 전달 합니다.
+foo.apply(mycar,['apply function','object']); //인자를 배열형태로 전달 합니다.
+</script>
+</body>
+</html>
